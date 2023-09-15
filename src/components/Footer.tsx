@@ -70,7 +70,7 @@ export const Footer = () => {
                                 {
                                     siteMap.map(
                                         (item, index) => {
-                                            return <Text as={'li'} py={1}><Link href={item.href}>{item.label}</Link></Text>
+                                            return <Text key={index} as={'li'} py={1}><Link href={item.href}>{item.label}</Link></Text>
                                         }
                                     )
                                 }
