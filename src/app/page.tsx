@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import {Footer} from "@/components/Footer";
 import Navbar from '@/components/Navbar';
+import MenuSection from './_home/_menu_section';
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       </div>
 
     </header>
+
+    <MenuSection />
     <Footer/>
     </>
   )

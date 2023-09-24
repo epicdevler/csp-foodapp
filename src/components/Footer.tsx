@@ -27,7 +27,7 @@ export const Footer = () => {
         },
     ]
     return (
-        <Box as={'footer'} py={16}>
+        <Box as={'footer'} px={16} pt={16}>
             <Container maxW={'container.lg'}>
                 <SimpleGrid columns={[1, null, 3]} spacing={20}>
                     <GridItem>
@@ -79,8 +79,7 @@ export const Footer = () => {
                     </GridItem>
                 </SimpleGrid>
 
-                <Box mt={10} >
-
+                <Box mt={10} py={9}>
                     <Text w={'full'} textAlign={'center'} fontSize={14}>
                         Copyright 2023 epicdevler | All rights reserved
                     </Text>
