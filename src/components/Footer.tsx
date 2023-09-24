@@ -27,9 +27,9 @@ export const Footer = () => {
         },
     ]
     return (
-        <Box as={'footer'} px={16} pt={16}>
+        <Box as={'footer'} px={{base: 3, lg: 16}} pt={16}>
             <Container maxW={'container.lg'}>
-                <SimpleGrid columns={[1, null, 3]} spacing={20}>
+                <SimpleGrid columns={[1, 2, 3]} gap={[20,10,20]}>
                     <GridItem>
                         <Box>
                             <Text fontSize={14}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam blanditiis

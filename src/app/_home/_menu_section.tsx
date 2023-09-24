@@ -15,56 +15,56 @@ export default function MenuSection() {
             "detail": "A classic Chinese soup made with mushrooms, tofu, and bamboo shoots in a spicy and tangy broth.",
             "rating": 4.5,
             "cost": 800,
-            "imgPrevUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc"
+            "imgPrevUrl": "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg"
         },
         {
             "title": "Kung Pao Chicken",
             "detail": "A popular Szechuan dish with diced chicken, peanuts, and vegetables in a spicy sauce.",
             "rating": 4.2,
             "cost": 1200,
-            "imgPrevUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc"
+            "imgPrevUrl": "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg"
         },
         {
             "title": "Sweet and Sour Pork",
             "detail": "Crispy pork pieces with bell peppers, pineapple, and onions in a tangy sweet and sour sauce.",
             "rating": 4,
             "cost": 1500,
-            "imgPrevUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc"
+            "imgPrevUrl": "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg"
         },
         {
             "title": "Mapo Tofu",
             "detail": "Soft tofu cubes cooked in a spicy and flavorful sauce with ground pork and Szechuan peppercorns.",
             "rating": 4.3,
             "cost": 1000,
-            "imgPrevUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc"
+            "imgPrevUrl": "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg"
         },
         {
             "title": "General Tso's Chicken",
             "detail": "Crispy chicken pieces in a sweet and spicy sauce with broccoli and carrots.",
             "rating": 4.4,
             "cost": 1300,
-            "imgPrevUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc"
+            "imgPrevUrl": "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg"
         },
         {
             "title": "Peking Duck",
             "detail": "Roasted duck served with thin pancakes, scallions, and hoisin sauce.",
             "rating": 4.6,
             "cost": 2500,
-            "imgPrevUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc"
+            "imgPrevUrl": "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg"
         },
         {
             "title": "Mongolian Beef",
             "detail": "Tender beef slices cooked with scallions and onions in a savory sauce.",
             "rating": 4.1,
             "cost": 1400,
-            "imgPrevUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc"
+            "imgPrevUrl": "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg"
         },
         {
             "title": "Shrimp Fried Rice",
             "detail": "Fried rice with shrimp, eggs, peas, and carrots.",
             "rating": 4.3,
             "cost": 900,
-            "imgPrevUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc"
+            "imgPrevUrl": "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg"
         }
     ]
 
