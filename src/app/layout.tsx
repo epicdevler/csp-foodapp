@@ -1,11 +1,11 @@
 import './globals.css'
-import type {Metadata} from 'next'
-import {Inter} from 'next/font/google'
-import {Footer} from "@/components/Footer";
-import {ChakraProvider} from "@chakra-ui/react";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { Footer } from "@/components/Footer";
+import { ChakraProvider } from "@chakra-ui/react";
 import { NavbarFull } from '@/components/Navbar';
 
-const inter = Inter({subsets: ['latin']})
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: 'De Cutleries',
@@ -13,20 +13,18 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-                                       children,
-                                   }: {
+    children,
+}: {
     children: React.ReactNode
 }) {
     return (
         <html lang="en">
-        <body className={`${inter.className} relative`}>
-        <ChakraProvider>
-        <NavbarFull />
-        
-            {children}
-            
-        </ChakraProvider>
-        </body>
+            <body className={`${inter.className} relative`}>
+                <ChakraProvider>
+                    {children}
+
+                </ChakraProvider>
+            </body>
         </html>
     )
 }
