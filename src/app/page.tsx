@@ -2,6 +2,7 @@ import Image from 'next/image'
 import {Footer} from "@/components/Footer";
 import Navbar from '@/components/Navbar';
 import MenuSection from './_home/_menu_section';
+import WhyChooseUsSection from './_home/_why_choose_us';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
     </header>
 
     <MenuSection />
+    <WhyChooseUsSection />
     <Footer/>
     </>
   )

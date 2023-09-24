@@ -71,7 +71,7 @@ export default function MenuSection() {
 
     return (
         <section id='menu'>
-            <Container maxW={'container.lg'} py={200}>
+            <Container maxW={'container.lg'} py={100}>
                 <Box textAlign={'center'}>
                     <Heading
                         variant={''}
