@@ -70,7 +70,7 @@ export default function MenuSection() {
 
 
     return (
-        <section>
+        <section id='menu'>
             <Container maxW={'container.lg'} py={200}>
                 <Box textAlign={'center'}>
                     <Heading
@@ -93,7 +93,7 @@ export default function MenuSection() {
                             (item, index) => {
                                 return (
                                     <GridItem key={index}>
-                                        <Card maxW={'xs'} h={'full'}>
+                                        <Card maxW={'full'} h={'full'}>
                                             <CardHeader p={0}>
                                                 <HStack spacing={1} className='absolute right-0 p-2'>
                                                     <IconButton
@@ -126,7 +126,7 @@ export default function MenuSection() {
                                                 <Stack spacing='5'>
                                                     <Flex alignItems={'flex-start'}>
                                                         <Heading w={'full'} me={3} size='sm'>{item.title}</Heading>
-                                                        <Text bg={'#F5F5F5'} borderRadius={'md'} p={1}  fontSize={"12px"}>100</Text>
+                                                        <Text bg={'#F5F5F5'} borderRadius={'md'} p={1}  fontSize={"12px"}>#{item.cost}</Text>
                                                     </Flex>
                                                     <Text fontSize={"14px"}>
                                                         {item.detail}

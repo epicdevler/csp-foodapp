@@ -45,9 +45,9 @@ export function NavbarFull(
     { show = false, onClose }: { show: boolean, onClose: () => void }
 ) {
 
-    
 
-    return <nav className={`fixed transition-all duration-150 w-full ${show ? "-" : ""}translate-x-full bg-white top-0 right-0 bg-[rgba(0, 0, 0, 85)] h-screen md:hidden p-5 z-50`}>
+
+    return <Box className={`fixed transition-all duration-150 w-full ${show ? "-" : ""}translate-x-full bg-white top-0 right-0 bg-[rgba(0, 0, 0, 85)] h-screen md:hidden p-5 z-50`}>
         <VStack spacing={10} >
             <Box w={'full'} textAlign={'end'}>
                 <IconButton
@@ -78,7 +78,7 @@ export function NavbarFull(
             <BookTaleBtn />
         </VStack>
 
-    </nav>
+    </Box>
 }
 
 
@@ -152,9 +152,10 @@ const Navbar = () => {
                     </HStack>
                 </Flex>
             </Container>
+
+            <NavbarFull show={isNavbarShown} onClose={handleNavbarToggle} />
         </nav>
 
-        <NavbarFull show={isNavbarShown} onClose={handleNavbarToggle} />
     </>
 }
 
