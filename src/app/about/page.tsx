@@ -1,12 +1,12 @@
+import AboutSection from "./_sections/_about_section"
+import ContactSection from "./_sections/_contact_section"
+import AboutHeroSection from "./_sections/_hero"
+
 const AboutPage = () => {
     return <>
-    
-    <section className='h-screen'>
-        About
-    </section>
-    <section id='contact' className='h-screen'>
-        Contact
-    </section>
+        <AboutHeroSection />
+        <AboutSection />
+        <ContactSection />
     </>
 }
 
