@@ -21,10 +21,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${inter.className} relative`}>
-
                 <ChakraProvider>
                     <DialogNavigation>
-
                         {children}
                         <Footer />
                     </DialogNavigation>

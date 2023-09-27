@@ -110,7 +110,7 @@ export default function ContactSection() {
             </Container>
             <Box id='map'>
                 <AspectRatio ratio={16 / 9}>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.9031991803454!2d7.182082974139727!3d4.429130143953698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1068572c7b0bf373%3A0xfab1cc89f92e4d11!2sDe%20Cutlery%20Fast%20Food%20%26%20Chinese%20Restaurant!5e0!3m2!1sen!2sng!4v1695818755805!5m2!1sen!2sng" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.9031991803454!2d7.182082974139727!3d4.429130143953698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1068572c7b0bf373%3A0xfab1cc89f92e4d11!2sDe%20Cutlery%20Fast%20Food%20%26%20Chinese%20Restaurant!5e0!3m2!1sen!2sng!4v1695818755805!5m2!1sen!2sng" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </AspectRatio>
             </Box>
         </section>
