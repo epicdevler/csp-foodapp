@@ -33,10 +33,12 @@ export default function RootLayout({
     }
 
     return (
-        <ChakraProvider>
-            <BookTableModal isOpen={view === "bookTable"} onClose={handleCloseModal} />
-            {children}
-            <Footer />
-        </ChakraProvider>
+        <>
+            <ChakraProvider>
+                <BookTableModal isOpen={view === "bookTable"} onClose={handleCloseModal} />
+                {children}
+                <Footer />
+            </ChakraProvider>
+        </>
     )
 }
