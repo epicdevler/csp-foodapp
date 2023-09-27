@@ -1,16 +1,14 @@
 'use client'
-import { ChakraProvider } from "@chakra-ui/react";
-import { Footer } from '@/components/Footer';
+import React from 'react'
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import BookTableModal from './book/modal';
-import Head from 'next/head';
+import BookTableModal from '@/app/(main)/book/modal';
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode
-}) {
+
+export default function DialogNavigation(
+    { children }: { children: React.ReactNode }
+) {
+
 
     const router = useRouter()
     const searchParams = useSearchParams()
@@ -34,11 +32,10 @@ export default function RootLayout({
 
     return (
         <>
-            <ChakraProvider>
-                <BookTableModal isOpen={view === "bookTable"} onClose={handleCloseModal} />
-                {children}
-                <Footer />
-            </ChakraProvider>
+            <BookTableModal isOpen={view === "bookTable"} onClose={handleCloseModal} />
+
+
+            {children}
         </>
     )
 }
