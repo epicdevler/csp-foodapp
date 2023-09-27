@@ -1,5 +1,4 @@
 import { Container, GridItem, VStack, SimpleGrid, Image, Text, Heading, LinkOverlay, LinkBox } from "@chakra-ui/react"
-import Link from "next/link"
 
 const MenuCategoriesPage = () => {
     return <>
@@ -14,7 +13,7 @@ const MenuCategoriesPage = () => {
                                     <GridItem key={index}>
                                         <LinkBox>
                                             <VStack spacing={4} w={'full'} h={'full'} alignItems={'center'} justifyContent={'center'}>
-                                                <LinkOverlay as={Link} href={`/menu/${index}`}>
+                                                <LinkOverlay href={`/menu/${index}`}>
                                                     <Image src='/food_1.jpg' alt="" borderRadius={'full'} width={100} height={100} />
                                                     <Text textAlign={'center'} mt={5} >Name</Text>
                                                 </LinkOverlay>

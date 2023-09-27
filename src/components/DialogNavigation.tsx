@@ -2,12 +2,10 @@
 import React from 'react'
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import BookTableModal from '@/app/(main)/book/modal';
+import BookTableModal from '@/app/book/modal';
 
 
-export default function DialogNavigation(
-    { children }: { children: React.ReactNode }
-) {
+export default function DialogNavigation() {
 
 
     const router = useRouter()
@@ -34,8 +32,6 @@ export default function DialogNavigation(
         <>
             <BookTableModal isOpen={view === "bookTable"} onClose={handleCloseModal} />
 
-
-            {children}
         </>
     )
 }

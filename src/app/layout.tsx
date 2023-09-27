@@ -22,10 +22,9 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${inter.className} relative`}>
                 <ChakraProvider>
-                    <DialogNavigation>
-                        {children}
-                        <Footer />
-                    </DialogNavigation>
+                    <DialogNavigation />
+                    {children}
+                    <Footer />
                 </ChakraProvider>
             </body>
         </html>
