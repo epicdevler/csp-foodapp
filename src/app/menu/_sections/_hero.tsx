@@ -1,8 +1,5 @@
-import React, { useEffect } from 'react'
-// import HeroImg from '../../../../public/food_2.jpg'
 import { Box, Flex, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Heading, Text } from '@chakra-ui/react'
 import Navbar from '@/components/Navbar'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 export default function MenuHeroSection() {
@@ -17,7 +14,7 @@ export default function MenuHeroSection() {
             <Box bgColor={'rgba(0, 0, 0, 0.50)'} >
 
                 <Navbar />
-        
+
                 <Box p={10} textColor={'white'} textAlign={'center'}>
                     <Heading >Our Menu</Heading>
                     <Flex justifyContent={'center'} p={5}>
