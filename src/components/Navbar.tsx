@@ -2,6 +2,7 @@
 import { Box, Container, Text, Flex, HStack, IconButton, VStack, SystemStyleObject, Button } from "@chakra-ui/react"
 import { MagnifyingGlassIcon, Bars3Icon, XCircleIcon, ShoppingCartIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 
@@ -34,9 +35,18 @@ const _iconBtnActiveEff: SystemStyleObject = {
     backgroundColor: "rgba(255, 255, 255, 0.10)"
 }
 
-
 function BookTaleBtn({ hideBelow }: { hideBelow?: "md" }) {
-    return <Button hideBelow={hideBelow}>
+
+    const router = useRouter()
+
+    return <Button
+        onClick={
+            () => {
+                router.push("?view=bookTable")
+            }
+        }
+        hideBelow={hideBelow}
+    >
         Book a Table
     </Button>
 }
@@ -83,6 +93,7 @@ export function NavbarFull(
 
 
 const Navbar = () => {
+
     const [isNavbarShown, setIsNavbarShown] = useState(false)
 
     const handleNavbarToggle = () => {
