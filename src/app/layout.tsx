@@ -1,12 +1,6 @@
-'use client'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { ChakraProvider } from "@chakra-ui/react";
-import { Footer } from '@/components/Footer';
-import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import BookTableModal from './book/modal';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,35 +15,10 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
 
-    const router = useRouter()
-    const searchParams = useSearchParams()
-    const [view, setView] = useState<string | undefined | null>(null)
-
-    useEffect(
-        () => {
-            const toView = searchParams.get("view")?.trim()
-
-            if(toView === "" || toView === null || toView == undefined){
-                setView(null)
-            }else{
-                setView(toView)
-            }
-            
-        },
-        [searchParams]
-    )
-    const handleCloseModal = () => {
-        router.back()
-    }
-
     return (
         <html lang="en">
             <body className={`${inter.className} relative`}>
-                <ChakraProvider>
-                    <BookTableModal isOpen={view === "bookTable"} onClose={handleCloseModal} />
-                    {children}
-                    <Footer />
-                </ChakraProvider>
+                {children}
             </body>
         </html>
     )
