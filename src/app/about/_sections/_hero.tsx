@@ -11,7 +11,7 @@ export default function AboutHeroSection() {
                 <Navbar />
 
 
-                <Box p={150} textColor={'white'} textAlign={'center'}>
+                <Box px={150} py={5} textColor={'white'} textAlign={'center'}>
                     <Heading >About Us</Heading>
                 </Box>
 

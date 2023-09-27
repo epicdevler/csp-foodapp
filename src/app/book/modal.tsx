@@ -101,6 +101,9 @@ const BookTableModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
                                                 </NumberInput>
                                             </FormControl>
                                         </GridItem>
+                                        <GridItem w={'full'}>
+                                            <Button bg={'orange'} textColor={'white'} _hover={{}} >Book</Button>
+                                        </GridItem>
                                     </SimpleGrid>
                                 </form>
                             </Container>
