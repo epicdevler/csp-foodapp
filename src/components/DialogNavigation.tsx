@@ -16,14 +16,14 @@ export default function DialogNavigation() {
     useEffect(
         () => {
             const toView = searchParams.get("view")?.trim()
-
             if (toView === "" || toView === null || toView == undefined) {
                 setView(null)
             } else {
                 setView(toView)
             }
+            console.log(toView)
         },
-        []
+        [searchParams]
     )
     const handleCloseModal = () => {
         router.back()

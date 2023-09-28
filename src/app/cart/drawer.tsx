@@ -6,6 +6,7 @@ const CartDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void 
         isOpen={isOpen}
         placement='right'
         onClose={onClose}
+         size={['full', null, 'md']}
     >
         <DrawerOverlay />
         <DrawerContent>
