@@ -2,28 +2,29 @@ import { Box, Container, GridItem, SimpleGrid, Text, HStack, IconButton, Flex, S
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import { StaticRoutes } from "@/app/route_util";
 
 export const Footer = () => {
     const siteMap = [
         {
             label: 'Home',
-            href: '/'
+            href: StaticRoutes.home
         },
         {
             label: 'Menu',
-            href: '/menu'
+            href: StaticRoutes.menu
         },
         {
-            label: 'My Crt',
-            href: '/cart'
+            label: 'My Cart',
+            href: StaticRoutes.viewCart
         },
         {
             label: 'About',
-            href: '/about'
+            href: StaticRoutes.about
         },
         {
             label: 'Contact',
-            href: '/about/#contact'
+            href: StaticRoutes.aboutContact
         },
     ]
     return (
@@ -70,7 +71,7 @@ export const Footer = () => {
                                 {
                                     siteMap.map(
                                         (item, index) => {
-                                            return <Text key={index} as={'li'} py={1}><Link href={item.href}>{item.label}</Link></Text>
+                                            return <Text key={index} as={'li'} py={1}><Link href={item.href.route}>{item.label}</Link></Text>
                                         }
                                     )
                                 }

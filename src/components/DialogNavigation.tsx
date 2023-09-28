@@ -3,6 +3,7 @@ import React from 'react'
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import BookTableModal from '@/app/book/modal';
+import CartDrawer from '@/app/cart/drawer';
 
 
 export default function DialogNavigation() {
@@ -22,7 +23,7 @@ export default function DialogNavigation() {
                 setView(toView)
             }
         },
-        [searchParams]
+        []
     )
     const handleCloseModal = () => {
         router.back()
@@ -31,7 +32,7 @@ export default function DialogNavigation() {
     return (
         <>
             <BookTableModal isOpen={view === "bookTable"} onClose={handleCloseModal} />
-
+            <CartDrawer isOpen={view === "cart"} onClose={handleCloseModal} />
         </>
     )
 }

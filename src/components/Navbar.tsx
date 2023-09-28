@@ -1,4 +1,5 @@
 'use client'
+import { StaticRoutes } from "@/app/route_util"
 import { Box, Container, Text, Flex, HStack, IconButton, VStack, SystemStyleObject, Button } from "@chakra-ui/react"
 import { MagnifyingGlassIcon, Bars3Icon, XCircleIcon, ShoppingCartIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
@@ -9,19 +10,19 @@ import { useState } from "react"
 const siteMap = [
     {
         label: 'Home',
-        href: '/'
+        href: StaticRoutes.home
     },
     {
         label: 'Menu',
-        href: '/menu'
+        href: StaticRoutes.menu
     },
     {
         label: 'About',
-        href: '/about'
+        href: StaticRoutes.about
     },
     {
         label: 'Contact',
-        href: '/about/#contact'
+        href: StaticRoutes.aboutContact
     },
 ]
 
@@ -40,9 +41,11 @@ function BookTaleBtn({ hideBelow }: { hideBelow?: "md" }) {
     const router = useRouter()
 
     return <Button
+        as={Link}
+        href={StaticRoutes.viewBookTable.route}
         onClick={
             () => {
-                router.push("?view=bookTable")
+                // router.push(StaticRoutes.viewBookTable.route)
             }
         }
         hideBelow={hideBelow}
@@ -78,7 +81,7 @@ export function NavbarFull(
                 {
                     siteMap.map(
                         (item, index) => {
-                            return <Text key={index} as={'li'} py={1}><Link href={item.href}>{item.label}</Link></Text>
+                            return <Text key={index} as={'li'} py={1}><Link href={item.href.route}>{item.label}</Link></Text>
                         }
                     )
                 }
@@ -112,7 +115,7 @@ const Navbar = () => {
                         {
                             siteMap.map(
                                 (item, index) => {
-                                    return <Text key={index} as={'li'} py={1}><Link href={item.href}>{item.label}</Link></Text>
+                                    return <Text key={index} as={'li'} py={1}><Link href={item.href.route}>{item.label}</Link></Text>
                                 }
                             )
                         }
@@ -138,6 +141,8 @@ const Navbar = () => {
                             aria-label="My Cart"
                             borderRadius='full'
                             bg={'transparent'}
+                            as={Link}
+                            href={StaticRoutes.viewCart.route}
                             icon={
 
                                 <ShoppingCartIcon
