@@ -117,7 +117,7 @@ const CartDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void 
 
 
                     {/* CART ACTIONS */}
-                    <VStack w={'full'} p={4} borderRadius={'lg'} bg={'gray.50'} spacing={5}>
+                    <VStack mb={9} w={'full'} p={4} borderRadius={'lg'} bg={'gray.50'} spacing={5}>
                         <HStack w={'full'} {...group}>
                             {options.map((value) => {
                                 const radio = getRadioProps({ value })
