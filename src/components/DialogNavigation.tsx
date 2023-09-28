@@ -21,7 +21,6 @@ export default function DialogNavigation() {
             } else {
                 setView(toView)
             }
-            console.log(toView)
         },
         [searchParams]
     )
