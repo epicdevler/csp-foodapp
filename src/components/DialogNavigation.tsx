@@ -2,8 +2,8 @@
 import React from 'react'
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import BookTableModal from '@/app/book/modal';
-import CartDrawer from '@/app/cart/drawer';
+import BookTableModal from '@/app/(customers)/book/modal';
+import CartDrawer from '@/app/(customers)/cart/drawer';
 
 
 export default function DialogNavigation() {

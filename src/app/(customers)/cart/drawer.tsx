@@ -1,4 +1,5 @@
 import { Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, Button, Input, VStack, Flex, Text, Divider, HStack, IconButton, Box, useRadio, useRadioGroup } from "@chakra-ui/react"
+import Link from "next/link"
 
 function RadioCard({ ...props }) {
     const { getInputProps, getRadioProps } = useRadio(props)
@@ -115,7 +116,6 @@ const CartDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void 
                         </Flex>
                     </VStack>
 
-
                     {/* CART ACTIONS */}
                     <VStack mb={9} w={'full'} p={4} borderRadius={'lg'} bg={'gray.50'} spacing={5}>
                         <HStack w={'full'} {...group}>
@@ -129,7 +129,7 @@ const CartDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void 
                             })}
                         </HStack>
 
-                        <Button _hover={{ bg: 'teal.600' }} fontWeight={400} p={3} w={'full'} bg='teal.700' textColor="white">Place Order</Button>
+                        <Button as={Link} href="/cart/checkout" _hover={{ bg: 'teal.600' }} fontWeight={400} p={3} w={'full'} bg='teal.700' textColor="white">Place Order</Button>
                     </VStack>
                 </VStack>
             </DrawerBody>

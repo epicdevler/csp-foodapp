@@ -1,4 +1,4 @@
-import MenuHeroSection from '@/app/menu/_sections/_hero'
+import MenuHeroSection from "./_sections/_hero"
 
 export default function RootLayout({
     children,
