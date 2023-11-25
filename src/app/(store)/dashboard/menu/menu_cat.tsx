@@ -1,60 +1,8 @@
 'use client'
+import { FoodCategories } from '@/libs/menu_constants'
 import { Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Alert, AlertIcon, Button, Input, Heading, Divider, VStack, HStack, Box, Flex, Text, RadioGroup, Radio, FormLabel, useRadioGroup } from '@chakra-ui/react'
 import { ChangeEvent, ChangeEventHandler, FormEvent, FormEventHandler, useEffect, useState } from 'react'
 
-
-const _foodCategories = [
-    {
-        "name": "Dim Sum",
-        "imgUrl": "https://example.com/dimsum.jpg",
-        "id": "1"
-    },
-    {
-        "name": "Kung Pao Chicken",
-        "imgUrl": "https://example.com/kungpao.jpg",
-        "id": "2"
-    },
-    {
-        "name": "Peking Duck",
-        "imgUrl": "https://example.com/pekingduck.jpg",
-        "id": "3"
-    },
-    {
-        "name": "Hot and Sour Soup",
-        "imgUrl": "https://example.com/hotsour.jpg",
-        "id": "4"
-    },
-    {
-        "name": "Mongolian Beef",
-        "imgUrl": "https://example.com/mongolianbeef.jpg",
-        "id": "5"
-    },
-    {
-        "name": "General Tso's Chicken",
-        "imgUrl": "https://example.com/generaltsos.jpg",
-        "id": "6"
-    },
-    {
-        "name": "Ma Po Tofu",
-        "imgUrl": "https://example.com/mapotofu.jpg",
-        "id": "7"
-    },
-    {
-        "name": "Egg Fried Rice",
-        "imgUrl": "https://example.com/eggfriedrice.jpg",
-        "id": "8"
-    },
-    {
-        "name": "Chow Mein",
-        "imgUrl": "https://example.com/chowmein.jpg",
-        "id": "9"
-    },
-    {
-        "name": "Spring Rolls",
-        "imgUrl": "https://example.com/springrolls.jpg",
-        "id": "10"
-    }
-]
 
 export default function MenuCategories(
     {
@@ -168,7 +116,7 @@ export default function MenuCategories(
                                             <RadioGroup onChange={setSelectedCategoryValue} value={selectedCategory} w={'full'}>
                                                 <VStack spacing={2} w={'full'} divider={<Divider />} >
                                                     {
-                                                        _foodCategories.map(
+                                                        FoodCategories.map(
                                                             category => {
                                                                 return <HStack key={category.id} w='full' spacing={3} alignItems={'center'}>
                                                                     <Radio value={category.name} id={category.name} />

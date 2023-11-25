@@ -23,5 +23,6 @@ export const StaticRoutes = {
     },
     menu: {
         route: `/menu`
-    }
+    },
+    Login: '/auth/login'
 }

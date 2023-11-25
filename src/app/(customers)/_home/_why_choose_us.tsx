@@ -21,11 +21,6 @@ export default function WhyChooseUsSection() {
             "serviceIcon": "/icons/service_order.png"
         },
         {
-            "title": "Table Reservation",
-            "detail": "Reserve a table in advance for a hassle-free dining experience",
-            "serviceIcon": "/icons/service_table.png"
-        },
-        {
             "title": "Catering Service",
             "detail": "Let us cater your special events and celebrations",
             "serviceIcon": "/icons/service_catering.png"

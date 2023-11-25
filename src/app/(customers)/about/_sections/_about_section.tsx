@@ -38,7 +38,7 @@ export default function AboutSection() {
 
                     <GridItem>
                         <Flex maxW={'full'} flexFlow={'auto'}>
-                            <Image borderRadius={'md'} src={'/food_2.jpg'} alt={'Food'} />
+                            <Image borderRadius={'md'} src={'/images/inside_view1.jpg'} alt={'Food'} />
                         </Flex>
                     </GridItem>
                 </SimpleGrid>

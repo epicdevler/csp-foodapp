@@ -16,7 +16,7 @@ export default function AboutSection() {
                 <SimpleGrid alignItems={'center'} gap={[10,20]} columns={{ sm: 1, md: 2 }}>
                     <GridItem>
                         <Flex maxW={'full'} flexFlow={'auto'}>
-                            <Image borderRadius={'md'} src={'/food_2.jpg'} alt={'Food'} />
+                            <Image borderRadius={'md'}  src={'/images/outside_view1.jpg'} alt={'Food'} />
                         </Flex>
                     </GridItem>
                     <GridItem>

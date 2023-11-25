@@ -7,6 +7,8 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useRef, useState } from "react"
 import { Loading } from "./LoadingPage"
+import { auth } from "@/db_init"
+import AuthButton from "./AuthButton"
 
 
 const siteMap = [
@@ -91,9 +93,7 @@ export function NavbarFull(
                     )
                 }
 
-                <Button
-                    onClick={logOut}
-                >Logout</Button>
+                <AuthButton shouldHide={false} onClick={logOut} />
 
             </VStack>
 
@@ -105,7 +105,6 @@ export function NavbarFull(
 
 
 const Navbar = () => {
-
 
 
     const toast = useToast()
@@ -211,12 +210,7 @@ const Navbar = () => {
                                     className="h-4 w-4 text-white" />
                             }
                         />
-                        <Button
-
-                            onClick={
-                                handleLogout
-                            }
-                            hideBelow={'md'}>Logout</Button>
+                        <AuthButton shouldHide={true} onClick={handleLogout} />
 
                         <IconButton
                             onClick={handleNavbarToggle}
