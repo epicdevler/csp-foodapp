@@ -45,7 +45,7 @@ export default function RootLayout({
                     >
 
                         <div className={`relative flex`}>
-                            <nav className={'hidden md:block md:w-1/5 bg-slate-100 h-screen p-3'}>
+                            <nav className={'hidden md:block md:w-1/5 bg-slate-100 h-screen'}>
                                 <Sidebar />
                             </nav>
                             <main className='w-full md:w-4/5 md:h-screen md:overflow-auto'>

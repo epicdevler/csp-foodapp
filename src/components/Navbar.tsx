@@ -1,10 +1,12 @@
 'use client'
 import { StaticRoutes } from "@/app/route_util"
-import { Box, Container, Text, Flex, HStack, IconButton, VStack, SystemStyleObject, Button } from "@chakra-ui/react"
-import { MagnifyingGlassIcon, Bars3Icon, XCircleIcon, ShoppingCartIcon } from "@heroicons/react/24/outline"
+import { logOut } from "@/libs/auth"
+import { Box, Container, Text, Flex, HStack, IconButton, VStack, SystemStyleObject, Button, ToastId, useToast, Modal, ModalBody, ModalContent, ModalOverlay } from "@chakra-ui/react"
+import { MagnifyingGlassIcon, Bars3Icon, XCircleIcon, ShoppingCartIcon, ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { useState } from "react"
+import { useRef, useState } from "react"
+import { Loading } from "./LoadingPage"
 
 
 const siteMap = [
@@ -36,11 +38,13 @@ const _iconBtnActiveEff: SystemStyleObject = {
     backgroundColor: "rgba(255, 255, 255, 0.10)"
 }
 
+
 function BookTaleBtn({ hideBelow }: { hideBelow?: "md" }) {
 
     const router = useRouter()
 
     return <Button
+        hidden={true}
         as={Link}
         href={StaticRoutes.viewBookTable.route}
         onClick={
@@ -55,8 +59,9 @@ function BookTaleBtn({ hideBelow }: { hideBelow?: "md" }) {
 }
 
 export function NavbarFull(
-    { show = false, onClose }: { show: boolean, onClose: () => void }
+    { show = false, onClose, logOut }: { show: boolean, onClose: () => void, logOut: () => void }
 ) {
+
 
 
 
@@ -86,6 +91,10 @@ export function NavbarFull(
                     )
                 }
 
+                <Button
+                    onClick={logOut}
+                >Logout</Button>
+
             </VStack>
 
             <BookTaleBtn />
@@ -97,11 +106,46 @@ export function NavbarFull(
 
 const Navbar = () => {
 
+
+
+    const toast = useToast()
+    const toastIdRef = useRef<ToastId>()
+
+    const router = useRouter()
+
     const [isNavbarShown, setIsNavbarShown] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [loadingMsg, setLoadingMsg] = useState("")
 
     const handleNavbarToggle = () => {
         setIsNavbarShown(!isNavbarShown)
     }
+    const toggleIsLoading = (message?: string | undefined) => {
+        if (message != undefined && message !== "") setLoadingMsg(message)
+        else setLoadingMsg("")
+        setIsLoading(!isLoading)
+    }
+
+    const handleLogout = () => {
+        toggleIsLoading("Logging you out...")
+        logOut()
+            .then(() => {
+                router.refresh()
+            })
+            .catch((e) => {
+
+                toastIdRef.current = toast(
+                    {
+                        description: `An error occured when loging out.`,
+                        status: 'error',
+                        duration: 1500,
+                    }
+                )
+                toggleIsLoading()
+                console.error("Error: ", e)
+            })
+    }
+
 
     return <>
         <nav>
@@ -149,6 +193,30 @@ const Navbar = () => {
                                     className="h-4 w-4 text-white" />
                             }
                         />
+                        <IconButton
+                            _active={_iconBtnActiveEff}
+                            transition={"border .2s ease-in-out"}
+                            _hover={_iconBtnHoverEff}
+                            aria-label="LogOut"
+                            borderRadius='full'
+                            // bg={'transparent'}
+                            hidden={true}
+                            // as={Link}
+                            // href={StaticRoutes.viewCart.route}
+                            icon={
+
+                                <ArrowLeftOnRectangleIcon
+                                    fill={'black'}
+                                    title="Logout"
+                                    className="h-4 w-4 text-white" />
+                            }
+                        />
+                        <Button
+
+                            onClick={
+                                handleLogout
+                            }
+                            hideBelow={'md'}>Logout</Button>
 
                         <IconButton
                             onClick={handleNavbarToggle}
@@ -169,8 +237,15 @@ const Navbar = () => {
                 </Flex>
             </Container>
 
-            <NavbarFull show={isNavbarShown} onClose={handleNavbarToggle} />
+            <NavbarFull show={isNavbarShown} onClose={handleNavbarToggle} logOut={handleLogout} />
         </nav>
+
+
+        {
+            isLoading ?
+                <Loading isOpen={isLoading} onClose={toggleIsLoading} message={loadingMsg} />
+                : undefined
+        }
 
     </>
 }

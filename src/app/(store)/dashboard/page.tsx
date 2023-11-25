@@ -40,7 +40,7 @@ export default function Dashboard() {
   return (
     <Box p={5}>
       <Heading>Dashboard</Heading>
-      <SimpleGrid mt={10} spacing={5} columns={{ base: 1, sm: 2, md: 4 }}>
+      <SimpleGrid mt={10} spacing={5} columns={{ base: 1, sm: 2, md: 3, lg: 4 }}>
         <GridItem>
           <DashboardReviewItem count={100} label="Total Orders" imgUrl={OrdersSVG} />
         </GridItem>

@@ -1,8 +1,11 @@
 'use client'
-import { Box, VStack } from '@chakra-ui/react';
+import { Loading } from '@/components/LoadingPage';
+import { logOut } from '@/libs/auth';
+import { Box, Button, Flex, Heading, ToastId, VStack, useToast } from '@chakra-ui/react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react'
+import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline"
 
 interface DashboardItem {
     label: string;
@@ -15,7 +18,17 @@ export default function Sidebar() {
 
     const path = usePathname()
 
-    
+
+
+    const toast = useToast()
+    const toastIdRef = useRef<ToastId>()
+
+    const router = useRouter()
+
+    const [isLoading, setIsLoading] = useState(false)
+    const [loadingMsg, setLoadingMsg] = useState("")
+
+
     useEffect(
         () => {
             const items = path.split("/")
@@ -66,29 +79,89 @@ export default function Sidebar() {
         }
     ]
 
-    return (
-        <VStack>
-            {
-                sideBarItems.map(
-                    (item, index) => {
-                        //<div className={` rounded-lg`} key={index}>
-                        return <Box
-                            key={index}
-                            as={Link}
-                            href={item.href}
-                            bg={`${item.active ? "var(--transparency-success, rgba(0, 176, 116, 0.15))" : ""}`}
-                            textColor={`${item.active ? "#00B074" : "#464255"}`}
-                            _hover={{
-                                textColor: "#00B074"
-                            }}
-                            borderRadius={'lg'} p={4} w={'full'}
-                        >
-                            {item.label}
-                        </Box>
-                        //</div>
+
+    const toggleIsLoading = (message?: string | undefined) => {
+        if (message != undefined && message !== "") setLoadingMsg(message)
+        else setLoadingMsg("")
+        setIsLoading(!isLoading)
+    }
+
+    const handleLogout = () => {
+        toggleIsLoading("Logging you out...")
+        logOut()
+            .then(() => {
+                router.refresh()
+            })
+            .catch((e) => {
+
+                toastIdRef.current = toast(
+                    {
+                        description: `An error occured when loging out.`,
+                        status: 'error',
+                        duration: 1500,
                     }
                 )
+                toggleIsLoading()
+                console.error("Error: ", e)
+            })
+    }
+
+    return (
+        <>
+            <Flex flexDirection={'column'} h={'full'}>
+                <VStack h={'full'} overflowY={'auto'}>
+                    <Heading size={'sm'} p={4} w={'full'}>Food App</Heading>
+                    {
+                        sideBarItems.map(
+                            (item, index) => {
+                                //<div className={` rounded-lg`} key={index}>
+                                return <Box
+                                    key={index}
+                                    as={Link}
+                                    href={item.href}
+                                    bg={`${item.active ? "var(--transparency-success, rgba(0, 176, 116, 0.15))" : ""}`}
+                                    textColor={`${item.active ? "#00B074" : "#464255"}`}
+                                    _hover={{
+                                        textColor: "#00B074"
+                                    }}
+                                    borderRadius={'lg'} p={4} w={'full'}
+                                >
+                                    {item.label}
+                                </Box>
+                                //</div>
+                            }
+                        )
+                    }
+                </VStack>
+
+                <Button
+                    w={'full'}
+                    leftIcon={
+
+                        <ArrowLeftOnRectangleIcon
+                            title="Logout"
+                            className="h-4 w-4" />
+                    }
+                    // hidden={true}
+                    // as={Link}
+                    // href={StaticRoutes.viewBookTable.route}
+                    onClick={
+                        handleLogout
+                    }
+                // hideBelow={hideBelow}
+                >
+
+                    Logout
+                </Button>
+            </Flex>
+
+
+
+            {
+                isLoading ?
+                    <Loading isOpen={isLoading} onClose={toggleIsLoading} message={loadingMsg} />
+                    : undefined
             }
-        </VStack>
+        </>
     )
 }

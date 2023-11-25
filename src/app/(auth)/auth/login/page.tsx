@@ -59,7 +59,7 @@ export default function Login() {
     setLoading(true)
     signInWithEmailAndPassword(auth, emailValue, passwordValue)
       .then((userCredential) => {
-        setLoading(false)
+
         // Signed in 
         const user = userCredential.user;
         manageUser(user.uid)
@@ -103,11 +103,13 @@ export default function Login() {
         } else {
           setError("Something went wrong, please try again.")
           logOut()
+          setLoading(false)
         }
       })
       .catch((error) => {
         console.error("Firestore: " + error)
         logOut()
+        setLoading(false)
       })
   }
 
