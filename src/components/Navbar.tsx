@@ -5,10 +5,11 @@ import { Box, Container, Text, Flex, HStack, IconButton, VStack, SystemStyleObje
 import { MagnifyingGlassIcon, Bars3Icon, XCircleIcon, ShoppingCartIcon, ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Loading } from "./LoadingPage"
 import { auth } from "@/db_init"
 import AuthButton from "./AuthButton"
+import { onAuthStateChanged } from "firebase/auth"
 
 
 const siteMap = [
@@ -61,7 +62,7 @@ function BookTaleBtn({ hideBelow }: { hideBelow?: "md" }) {
 }
 
 export function NavbarFull(
-    { show = false, onClose, logOut }: { show: boolean, onClose: () => void, logOut: () => void }
+    { show = false, onClose, isSigendIn, logOut }: { isSigendIn: boolean, show: boolean, onClose: () => void, logOut: () => void }
 ) {
 
 
@@ -93,7 +94,7 @@ export function NavbarFull(
                     )
                 }
 
-                <AuthButton shouldHide={false} onClick={logOut} />
+                <AuthButton isSignedIn={isSigendIn} shouldHide={false} onClick={logOut} />
 
             </VStack>
 
@@ -105,6 +106,15 @@ export function NavbarFull(
 
 
 const Navbar = () => {
+    const [isSignedIn, setIsSignedIn] = useState(false)
+
+    useEffect(
+        () => {
+            onAuthStateChanged(auth, (user) => {
+                setIsSignedIn(user != null)
+            })
+        }, []
+    )
 
 
     const toast = useToast()
@@ -210,7 +220,7 @@ const Navbar = () => {
                                     className="h-4 w-4 text-white" />
                             }
                         />
-                        <AuthButton shouldHide={true} onClick={handleLogout} />
+                        <AuthButton isSignedIn={isSignedIn} shouldHide={true} onClick={handleLogout} />
 
                         <IconButton
                             onClick={handleNavbarToggle}
@@ -231,7 +241,7 @@ const Navbar = () => {
                 </Flex>
             </Container>
 
-            <NavbarFull show={isNavbarShown} onClose={handleNavbarToggle} logOut={handleLogout} />
+            <NavbarFull isSigendIn={isSignedIn} show={isNavbarShown} onClose={handleNavbarToggle} logOut={handleLogout} />
         </nav>
 
 
