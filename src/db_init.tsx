@@ -4,7 +4,8 @@ import { getAuth, connectAuthEmulator } from "firebase/auth";
 import { getFirestore, connectFirestoreEmulator } from "firebase/firestore";
 import { getStorage, connectStorageEmulator } from "firebase/storage";
 
-const isLocalHost = location.hostname === "localhost" || location.hostname === "127.0.0.1"
+const isLocalHost = false//location.hostname === "localhost" || location.hostname === "127.0.0.1"
+// console.log("IsLocalHost: ", isLocalHost)
 
 
 const firebaseConfig = {
