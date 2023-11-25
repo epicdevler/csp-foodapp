@@ -5,7 +5,6 @@ import Link from "next/link";
 
 export default function AuthButton({ isSignedIn, onClick, shouldHide }: { isSignedIn: boolean, shouldHide: boolean, onClick: () => void }) {
 
-    console.log(isSignedIn)
     const hiddenBelow = shouldHide ? 'md' : ''
     return (
         <>

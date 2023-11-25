@@ -139,7 +139,7 @@ const Navbar = () => {
         toggleIsLoading("Logging you out...")
         logOut()
             .then(() => {
-                router.refresh()
+                router.replace('/auth/login')                
             })
             .catch((e) => {
 

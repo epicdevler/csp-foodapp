@@ -413,3 +413,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 21+35-LTS-2513, mixed mode, sharing)
 
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
+[debug] [2023-11-25T13:30:40.875Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast [none]
+[debug] [2023-11-25T13:30:40.952Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"eventId":"92614c7f-43e8-4656-8782-d35d2d91ea87","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/cs-foodapp","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-11-25T13:30:40.836Z","data":{"uid":"Ei1n5f9hjS60dCkXHlHtXkeNLBMk","email":"dev.epicdevler@gmail.com","emailVerified":false,"metadata":{"creationTime":"2023-11-25T13:30:40.810Z","lastSignInTime":"2023-11-25T13:30:40.810Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"dev.epicdevler@gmail.com","federatedId":"dev.epicdevler@gmail.com","rawId":"dev.epicdevler@gmail.com"}]}}
+[debug] [2023-11-25T13:30:41.202Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast 200
+[debug] [2023-11-25T13:30:41.202Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"status":"multicast_acknowledged"}
