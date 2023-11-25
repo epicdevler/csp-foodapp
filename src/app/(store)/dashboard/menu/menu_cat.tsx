@@ -1,26 +1,100 @@
 'use client'
-import { Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Button, Input, Heading, Divider, VStack, HStack, Box, Flex, Text, RadioGroup, Radio, FormLabel } from '@chakra-ui/react'
-import { ChangeEventHandler, FormEventHandler, useState } from 'react'
+import { Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Alert, AlertIcon, Button, Input, Heading, Divider, VStack, HStack, Box, Flex, Text, RadioGroup, Radio, FormLabel, useRadioGroup } from '@chakra-ui/react'
+import { ChangeEvent, ChangeEventHandler, FormEvent, FormEventHandler, useEffect, useState } from 'react'
+
+
+const _foodCategories = [
+    {
+        "name": "Dim Sum",
+        "imgUrl": "https://example.com/dimsum.jpg",
+        "id": "1"
+    },
+    {
+        "name": "Kung Pao Chicken",
+        "imgUrl": "https://example.com/kungpao.jpg",
+        "id": "2"
+    },
+    {
+        "name": "Peking Duck",
+        "imgUrl": "https://example.com/pekingduck.jpg",
+        "id": "3"
+    },
+    {
+        "name": "Hot and Sour Soup",
+        "imgUrl": "https://example.com/hotsour.jpg",
+        "id": "4"
+    },
+    {
+        "name": "Mongolian Beef",
+        "imgUrl": "https://example.com/mongolianbeef.jpg",
+        "id": "5"
+    },
+    {
+        "name": "General Tso's Chicken",
+        "imgUrl": "https://example.com/generaltsos.jpg",
+        "id": "6"
+    },
+    {
+        "name": "Ma Po Tofu",
+        "imgUrl": "https://example.com/mapotofu.jpg",
+        "id": "7"
+    },
+    {
+        "name": "Egg Fried Rice",
+        "imgUrl": "https://example.com/eggfriedrice.jpg",
+        "id": "8"
+    },
+    {
+        "name": "Chow Mein",
+        "imgUrl": "https://example.com/chowmein.jpg",
+        "id": "9"
+    },
+    {
+        "name": "Spring Rolls",
+        "imgUrl": "https://example.com/springrolls.jpg",
+        "id": "10"
+    }
+]
 
 export default function MenuCategories(
     {
-        openCat, toggleCloseCat
+        openCat, toggleCloseCat,
+        onCategoryValueChange,
     }: {
-        openCat: boolean, toggleCloseCat: () => void
+        openCat: boolean,
+        toggleCloseCat: () => void,
+        onCategoryValueChange: (value: string) => void,
     }
 ) {
 
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [isError, setIsError] = useState<boolean>(false)
     const [newCategoryValue, setNewCategoryValue] = useState<string>('')
+    const [selectedCategory, setSelectedCategoryValue] = useState<string>('')
+    const [error, setError] = useState<string>('')
+    const [errorFor, setErrorFor] = useState<string>('')
 
-    const handleNewCategoryValueChange = (e: ChangeEventHandler<HTMLInputElement>) => {
+    useEffect(() => {
+        setIsError(error !== null && error !== "")
+
+        return () => {
+            setIsError(false)
+        }
+    }, [error])
+
+    useEffect(() => {
+        if (isError && selectedCategory !== "") {
+            setError("")
+        }
+    }, [selectedCategory])
+
+    const handleNewCategoryValueChange = (e: ChangeEvent<HTMLInputElement>) => {
         // console.log(e.target.value)
         const value = e.target.value
         setNewCategoryValue(value)
     }
 
-    const handleAddNewMenuCategory = (e: FormEventHandler<HTMLFormElement>) => {
+    const handleAddNewMenuCategory = (e: FormEvent<HTMLFormElement>) => {
 
         const value = newCategoryValue
 
@@ -34,18 +108,32 @@ export default function MenuCategories(
         e.preventDefault()
     }
 
+
+    const selectCategory = () => {
+
+        if (selectedCategory === "") {
+            setErrorFor("selectRadioOption")
+            setError("Select a category")
+        } else {
+            onCategoryValueChange(selectedCategory)
+        }
+    }
+
+
     return (
         <>
-            <Modal onClose={toggleCloseCat} size={'md'} isOpen={openCat}>
+            <Modal scrollBehavior='inside' onClose={toggleCloseCat} size={'md'} isOpen={openCat}>
                 <ModalOverlay />
                 <ModalContent h={'full'} >
                     <ModalCloseButton textColor={['white', 'white', 'black']} />
                     <ModalBody p={5}>
                         <Heading size='lg'>Menu Categories</Heading>
                         <Divider my={5} />
+
+
                         <form className='' onSubmit={handleAddNewMenuCategory}>
                             <VStack spacing={4}>
-                                <HStack>
+                                <HStack hidden={true}>
                                     <Input
                                         value={newCategoryValue}
                                         onChange={
@@ -60,6 +148,14 @@ export default function MenuCategories(
                                     </Button>
                                 </HStack>
 
+
+                                {
+                                    isError ?
+                                        <Alert my={5} status="error"><AlertIcon /> {error}</Alert>
+                                        :
+                                        <></>
+                                }
+
                                 {
                                     isLoading ?
                                         <p>Loading</p>
@@ -67,29 +163,23 @@ export default function MenuCategories(
                                 }
 
                                 {
-                                    isError ?
-                                        <p>Error</p>
-                                        : <></>
-                                }
-
-
-                                {
-                                    !isError && !isLoading ?
+                                    !isError && !isLoading || isError && errorFor === "selectRadioOption" ?
                                         <VStack alignItems={'end'} spacing={5} w={'full'}>
-                                            <RadioGroup w={'full'}>
+                                            <RadioGroup onChange={setSelectedCategoryValue} value={selectedCategory} w={'full'}>
                                                 <VStack spacing={2} w={'full'} divider={<Divider />} >
-
-                                                    <HStack w='full' spacing={3} alignItems={'center'}>
-                                                        <Radio value='one' id='one' />
-                                                        <FormLabel htmlFor='one' w={'full'}>One</FormLabel>
-                                                    </HStack>
-                                                    <HStack w='full' spacing={3} alignItems={'center'}>
-                                                        <Radio value='two' id='two' />
-                                                        <FormLabel htmlFor='two' w={'full'}>Two</FormLabel>
-                                                    </HStack>
+                                                    {
+                                                        _foodCategories.map(
+                                                            category => {
+                                                                return <HStack key={category.id} w='full' spacing={3} alignItems={'center'}>
+                                                                    <Radio value={category.name} id={category.name} />
+                                                                    <FormLabel htmlFor={category.name} w={'full'}>{category.name}</FormLabel>
+                                                                </HStack>
+                                                            }
+                                                        )
+                                                    }
                                                 </VStack>
                                             </RadioGroup>
-                                            <Button mt={4} colorScheme='green'>Done</Button>
+                                            <Button onClick={selectCategory} mt={4} colorScheme='green'>Done</Button>
                                         </VStack>
                                         : <></>
                                 }

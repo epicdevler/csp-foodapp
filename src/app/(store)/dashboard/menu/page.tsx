@@ -3,7 +3,7 @@ import { Heading, Box, TableContainer, Table, Thead, Tbody, Th, Tr, Td, Badge, I
 import Link from "next/link";
 import Image from "next/image";
 import MenuIcon from '../../../../../public/icons/menu_icon.svg'
-import { useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import AddMenuItem from "./add_menu";
 import MenuCategories from "./menu_cat";
 
@@ -11,7 +11,7 @@ export default function Menu() {
 
   const [addItem, setAddItem] = useState<boolean>(false)
   const [menuCategoryOpen, setMenuCategoryOpen] = useState<boolean>(false)
-  
+  const [menuCategoryValue, setMenuCategoryValue] = useState<string>('')
 
   const toggleAddItem = () => {
     setAddItem(!addItem)
@@ -20,15 +20,20 @@ export default function Menu() {
     setMenuCategoryOpen(!menuCategoryOpen)
   }
 
+  const setSelectCategory = (value: string) => {
+    setMenuCategoryValue(value)
+    toggleOpenCategories()
+  }
+
   return (
     <>
       <Box p={5}>
         <Heading size={'lg'}>Menu Items</Heading>
 
         <Button
-         colorScheme="green"
-         mt={5}
-         onClick={toggleAddItem}
+          colorScheme="green"
+          mt={5}
+          onClick={toggleAddItem}
         >
           Add Item
         </Button>
@@ -86,9 +91,23 @@ export default function Menu() {
 
 
 
-      <AddMenuItem addItem={addItem} openCategories={toggleOpenCategories} toggleAddItem={toggleAddItem} />
+      {
+        addItem ?
+          <AddMenuItem addItem={addItem} openCategories={toggleOpenCategories} toggleAddItem={toggleAddItem} categoryValue={menuCategoryValue} onCategoryValueChange={() => { }} />
+          :
+          undefined
+      }
 
-      <MenuCategories openCat={menuCategoryOpen} toggleCloseCat={toggleOpenCategories} />
+
+      {
+        menuCategoryOpen ?
+          <MenuCategories openCat={menuCategoryOpen} toggleCloseCat={toggleOpenCategories} onCategoryValueChange={setSelectCategory} />
+          :
+          undefined
+      }
+
+
+
     </>
   )
 }

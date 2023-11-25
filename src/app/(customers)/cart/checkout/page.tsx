@@ -58,6 +58,8 @@ const CheckOutPage = () => {
     const [fName, setFName] = useState("")
     const [lName, setLName] = useState("")
     const [phone, setPhone] = useState("")
+    const [address, setAddress] = useState("")
+    const [dAddress, setDAddress] = useState("")
 
 
 
@@ -110,9 +112,13 @@ const CheckOutPage = () => {
                         const errors: Errors = {};
                         if (values.firstName !== "") {
                             setFName(values.firstName)
+                        }else{
+                            errors.firstName = "Enter your your first name"
                         }
                         if (values.lastName !== "") {
                             setLName(values.lastName)
+                        }else{
+                            errors.lastName = "Enter your your last name"
                         }
                         if (!isValidPhoneNumber(values.phoneNumber, "NG")) {
                             errors.phoneNumber = "Invalid Phone Number Provided"
@@ -124,6 +130,19 @@ const CheckOutPage = () => {
                         } else {
                             setEmail(values.email)
                         }
+                        
+                        if (values.address !== "") {
+                            setAddress(values.address)
+                        }else{
+                            errors.address = "Provide your address"
+                        }
+                        
+                        if (values.deliveryAddress !== "" && deliveryOption === "Home Delivery") {
+                            setAddress(values.deliveryAddress)
+                        }else{
+                            errors.deliveryAddress = "Provide your home address"
+                        }
+
                         return errors;
                     }
                     }
@@ -166,7 +185,11 @@ const CheckOutPage = () => {
                                                             w={'full'}
                                                         />
 
-                                                        <ErrorMessage name="firstName" component="div" />
+                                                        <ErrorMessage  name="firstName">
+                                                    {
+                                                        msg => <Text textColor={'red'} fontSize={"14px"}>{msg}</Text>
+                                                    }
+                                                </ErrorMessage>
                                                     </FormControl>
                                                 </GridItem>
                                                 <GridItem w={'full'}>
@@ -181,7 +204,11 @@ const CheckOutPage = () => {
                                                             w={'full'}
                                                         />
 
-                                                        <ErrorMessage name="lastName" component="div" />
+                                                        <ErrorMessage  name="lastName">
+                                                    {
+                                                        msg => <Text textColor={'red'} fontSize={"14px"}>{msg}</Text>
+                                                    }
+                                                </ErrorMessage>
                                                     </FormControl>
                                                 </GridItem>
                                                 <GridItem w={'full'}>
@@ -196,7 +223,11 @@ const CheckOutPage = () => {
                                                             w={'full'}
                                                         />
 
-                                                        <ErrorMessage name="email" component="div" />
+                                                        <ErrorMessage  name="email">
+                                                    {
+                                                        msg => <Text textColor={'red'} fontSize={"14px"}>{msg}</Text>
+                                                    }
+                                                </ErrorMessage>
                                                     </FormControl>
                                                 </GridItem>
 
@@ -214,7 +245,11 @@ const CheckOutPage = () => {
                                                                 w={'full'}
                                                             />
                                                         </InputGroup>
-                                                        <ErrorMessage name="phoneNumber" component="div" />
+                                                        <ErrorMessage  name="phoneNumber">
+                                                    {
+                                                        msg => <Text textColor={'red'} fontSize={"14px"}>{msg}</Text>
+                                                    }
+                                                </ErrorMessage>
                                                     </FormControl>
                                                 </GridItem>
                                                 <GridItem w='full'>
@@ -232,7 +267,11 @@ const CheckOutPage = () => {
                                                                     w={'full'}
                                                                 />
 
-                                                                <ErrorMessage name="country" component="div" />
+                                                                <ErrorMessage  name="country">
+                                                    {
+                                                        msg => <Text textColor={'red'} fontSize={"14px"}>{msg}</Text>
+                                                    }
+                                                </ErrorMessage>
                                                             </FormControl>
                                                         </GridItem>
                                                         <GridItem w={'full'}>
@@ -248,7 +287,11 @@ const CheckOutPage = () => {
                                                                     w={'full'}
                                                                 />
 
-                                                                <ErrorMessage name="state" component="div" />
+                                                                <ErrorMessage  name="state">
+                                                    {
+                                                        msg => <Text textColor={'red'} fontSize={"14px"}>{msg}</Text>
+                                                    }
+                                                </ErrorMessage>
                                                             </FormControl>
                                                         </GridItem>
                                                     </SimpleGrid>
@@ -266,7 +309,11 @@ const CheckOutPage = () => {
                                                             w={'full'}
                                                         />
 
-                                                        <ErrorMessage name="address" component="div" />
+                                                        <ErrorMessage  name="address">
+                                                    {
+                                                        msg => <Text textColor={'red'} fontSize={"14px"}>{msg}</Text>
+                                                    }
+                                                </ErrorMessage>
                                                     </FormControl>
                                                 </GridItem>
                                             </SimpleGrid>
@@ -321,7 +368,11 @@ const CheckOutPage = () => {
                                                     onChange={handleChange}
                                                     value={values.deliveryAddress}
                                                 />
-                                                <ErrorMessage name="deliveryAddress" component="div" />
+                                                <ErrorMessage  name="deliveryAddress">
+                                                    {
+                                                        msg => <Text textColor={'red'} fontSize={"14px"}>{msg}</Text>
+                                                    }
+                                                </ErrorMessage>
                                             </FormControl>
 
                                             <Button type="submit" disabled={isSubmitting} w={'full'} mt={4} colorScheme='green'>Proceed to Payment</Button>
