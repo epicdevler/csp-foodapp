@@ -304,8 +304,7 @@ const CheckOutPage = () => {
                                                             type='text'
                                                             onChange={handleChange}
                                                             value={values.address}
-                                                            name="address"
-                                                            readOnly={true}
+                                                            name="address"                                                            
                                                             w={'full'}
                                                         />
 
