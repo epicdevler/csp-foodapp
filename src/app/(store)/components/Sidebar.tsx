@@ -1,5 +1,5 @@
 'use client'
-import { Loading } from '@/components/LoadingPage';
+import { MiniLoader } from '@/components/LoadingPage';
 import { logOut } from '@/libs/auth';
 import { Box, Button, Flex, Heading, ToastId, VStack, useToast } from '@chakra-ui/react';
 import Link from 'next/link';
@@ -159,7 +159,7 @@ export default function Sidebar() {
 
             {
                 isLoading ?
-                    <Loading isOpen={isLoading} onClose={toggleIsLoading} message={loadingMsg} />
+                    <MiniLoader isOpen={isLoading} onClose={toggleIsLoading} message={loadingMsg} />
                     : undefined
             }
         </>

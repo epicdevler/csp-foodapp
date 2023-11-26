@@ -33,7 +33,7 @@ export default function MenuHeroSection() {
                                 pathItems.length > 1 ?
                                     (
                                         <BreadcrumbItem isLastChild={true} isCurrentPage={true}>
-                                            <BreadcrumbLink>{pathItems[1]}</BreadcrumbLink>
+                                            <BreadcrumbLink>{pathItems[1].replace("%20", " ")}</BreadcrumbLink>
                                         </BreadcrumbItem>
                                     )
                                     :

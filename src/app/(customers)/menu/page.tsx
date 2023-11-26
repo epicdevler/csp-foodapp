@@ -2,6 +2,9 @@ import { FoodCategories } from "@/libs/menu_constants"
 import { Container, GridItem, VStack, SimpleGrid, Image, Text, Heading, LinkOverlay, LinkBox } from "@chakra-ui/react"
 
 const MenuCategoriesPage = () => {
+
+
+    
     return <>
         <section>
             <Container p={5} py={150} maxW={'container.lg'}>

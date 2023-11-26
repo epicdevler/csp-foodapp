@@ -1,205 +1,72 @@
-[debug] [2023-11-25T01:53:55.968Z] ----------------------------------------------------------------------
-[debug] [2023-11-25T01:53:55.971Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --import=exported-dev-data --export-on-exit=exported-dev-data
-[debug] [2023-11-25T01:53:55.972Z] CLI Version:   12.9.1
-[debug] [2023-11-25T01:53:55.972Z] Platform:      win32
-[debug] [2023-11-25T01:53:55.972Z] Node Version:  v21.1.0
-[debug] [2023-11-25T01:53:55.972Z] Time:          Sat Nov 25 2023 02:53:55 GMT+0100 (West Africa Standard Time)
-[debug] [2023-11-25T01:53:55.973Z] ----------------------------------------------------------------------
+[debug] [2023-11-25T22:02:10.903Z] ----------------------------------------------------------------------
+[debug] [2023-11-25T22:02:10.908Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --import=exported-dev-data --export-on-exit=exported-dev-data
+[debug] [2023-11-25T22:02:10.909Z] CLI Version:   12.9.1
+[debug] [2023-11-25T22:02:10.909Z] Platform:      win32
+[debug] [2023-11-25T22:02:10.910Z] Node Version:  v21.1.0
+[debug] [2023-11-25T22:02:10.910Z] Time:          Sat Nov 25 2023 23:02:10 GMT+0100 (West Africa Standard Time)
+[debug] [2023-11-25T22:02:10.910Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-11-25T01:53:56.175Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-11-25T01:53:56.175Z] > authorizing via signed-in user (dev.epicdevler@gmail.com)
-[debug] [2023-11-25T01:53:57.150Z] java version "21" 2023-09-19 LTS
+[debug] [2023-11-25T22:02:11.478Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-25T22:02:11.479Z] > authorizing via signed-in user (dev.epicdevler@gmail.com)
+[debug] [2023-11-25T22:02:13.187Z] java version "21" 2023-09-19 LTS
 
-[debug] [2023-11-25T01:53:57.151Z] Java(TM) SE Runtime Environment (build 21+35-LTS-2513)
+[debug] [2023-11-25T22:02:13.188Z] Java(TM) SE Runtime Environment (build 21+35-LTS-2513)
 Java HotSpot(TM) 64-Bit Server VM (build 21+35-LTS-2513, mixed mode, sharing)
 
-[debug] [2023-11-25T01:53:57.208Z] Parsed Java major version: 21
+[debug] [2023-11-25T22:02:13.231Z] Parsed Java major version: 21
 [info] i  emulators: Starting emulators: auth, functions, firestore, database, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, storage"}}
-[debug] [2023-11-25T01:53:57.232Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T01:53:57.232Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T01:53:57.233Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T01:53:57.233Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T01:53:57.233Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T01:53:57.234Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T01:53:57.235Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":1000},{"address":"::1","family":"IPv6","port":1000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9151}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-11-25T22:02:13.267Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-11-25T22:02:13.267Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-11-25T22:02:13.267Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-11-25T22:02:13.267Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-11-25T22:02:13.268Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-11-25T22:02:13.268Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-11-25T22:02:13.268Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":1000},{"address":"::1","family":"IPv6","port":1000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
 [warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project cs-foodapp. This may result in unexpected behavior. 
-[debug] [2023-11-25T01:53:57.278Z] [hub] writing locator at C:\Users\User\AppData\Local\Temp\hub-cs-foodapp.json
-[debug] [2023-11-25T01:53:57.292Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T01:53:57.292Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T01:53:57.293Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":1000},{"address":"::1","family":"IPv6","port":1000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9151}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
-[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: hosting, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mhosting, pubsub\u001b[22m"}}
-[debug] [2023-11-25T01:53:57.311Z] defaultcredentials: writing to file C:\Users\User\AppData\Roaming\firebase\dev_epicdevler_gmail.com_application_default_credentials.json
-[debug] [2023-11-25T01:53:57.315Z] Setting GAC to C:\Users\User\AppData\Roaming\firebase\dev_epicdevler_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\User\\AppData\\Roaming\\firebase\\dev_epicdevler_gmail.com_application_default_credentials.json"}}
-[debug] [2023-11-25T01:53:57.316Z] > refreshing access token with scopes: []
-[debug] [2023-11-25T01:53:57.320Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-11-25T01:53:57.320Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-11-25T01:53:57.692Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-11-25T01:53:57.693Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-11-25T01:53:57.815Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig [none]
-[debug] [2023-11-25T01:53:58.317Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig 200
-[debug] [2023-11-25T01:53:58.318Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig {"projectId":"cs-foodapp","databaseURL":"https://cs-foodapp-default-rtdb.firebaseio.com","storageBucket":"cs-foodapp.appspot.com","locationId":"us-central"}
-[debug] [2023-11-25T01:53:58.366Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-11-25T01:53:58.366Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2023-11-25T01:53:58.367Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\User\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8081,"--websocket_port",9151,"--project_id","cs-foodapp","--rules","C:\\_dev\\foodapp\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8081,\"--websocket_port\",9151,\"--project_id\",\"cs-foodapp\",\"--rules\",\"C:\\\\_dev\\\\foodapp\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
-[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[info] +  firestore: Firestore Emulator UI websocket is running on 9151. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9151."}}
-[debug] [2023-11-25T01:54:05.956Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp [none]
-[debug] [2023-11-25T01:54:06.440Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp 200
-[debug] [2023-11-25T01:54:06.440Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp {"projectId":"cs-foodapp","projectNumber":"385838129821","displayName":"CS foodapp","name":"projects/cs-foodapp","resources":{"hostingSite":"cs-foodapp","realtimeDatabaseInstance":"cs-foodapp-default-rtdb","storageBucket":"cs-foodapp.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_039070c2-b590-4afc-bd93-c4384dc123bf"}
-[debug] [2023-11-25T01:54:06.441Z] database rules config:  [{"instance":"cs-foodapp-default-rtdb","rules":"C:\\_dev\\foodapp\\database.rules.json"}]
-[debug] [2023-11-25T01:54:06.447Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
-[debug] [2023-11-25T01:54:06.447Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-11-25T01:54:06.447Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
-[debug] [2023-11-25T01:54:06.448Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\User\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning","--functions_emulator_host","127.0.0.1","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\",\"--functions_emulator_host\",\"127.0.0.1\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
-[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
-[debug] [2023-11-25T01:54:22.430Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-11-25T01:54:24.967Z] Temp file directory for storage emulator: C:\Users\User\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\User\\AppData\\Local\\Temp/firebase/storage/blobs"}}
-[debug] [2023-11-25T01:54:25.014Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-11-25T01:54:25.014Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-11-25T01:54:25.014Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\User\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
-[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-11-25T01:54:25.215Z] Web / API server started at 127.0.0.1:1000
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:1000\n"}}
-[debug] [2023-11-25T01:54:25.216Z] Web / API server started at ::1:1000
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:1000\n"}}
-[info] i  functions: Watching "C:\_dev\foodapp\cfun" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\_dev\\foodapp\\cfun\" for Cloud Functions..."}}
-[debug] [2023-11-25T01:54:25.326Z] Validating nodejs source
-[debug] [2023-11-25T01:54:27.606Z] > [functions] package.json contents: {
-  "name": "functions",
-  "scripts": {
-    "lint": "eslint --ext .js,.ts .",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "18"
-  },
-  "main": "lib/index.js",
-  "dependencies": {
-    "firebase-admin": "^11.8.0",
-    "firebase-functions": "^4.3.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
-    "eslint": "^8.9.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-import": "^2.25.4",
-    "firebase-functions-test": "^3.1.0",
-    "typescript": "^4.9.0"
-  },
-  "private": true
-}
-[debug] [2023-11-25T01:54:27.607Z] Building nodejs source
-[debug] [2023-11-25T01:54:27.607Z] Failed to find version of module node: reached end of search path C:\_dev\foodapp\cfun\node_modules
-[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
-[debug] [2023-11-25T01:54:27.611Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-11-25T01:54:27.619Z] Found firebase-functions binary at 'C:\_dev\foodapp\cfun\node_modules\.bin\firebase-functions'
-[info] Serving at port 8105
-
-[debug] [2023-11-25T01:54:31.713Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
-[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
-[debug] [2023-11-25T01:54:36.811Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=cs-foodapp-default-rtdb
-[debug] [2023-11-25T01:54:36.811Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
-[debug] [2023-11-25T01:54:38.737Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
-[debug] [2023-11-25T01:54:38.737Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
-[info] 
-┌─────────────────────────────────────────────────────────────┐
-│ ✔  All emulators ready! It is now safe to connect your app. │
-│ i  View Emulator UI at http://127.0.0.1:1000/               │
-└─────────────────────────────────────────────────────────────┘
-
-┌────────────────┬────────────────┬─────────────────────────────────┐
-│ Emulator       │ Host:Port      │ View in Emulator UI             │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:1000/auth      │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:1000/functions │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Firestore      │ 127.0.0.1:8081 │ http://127.0.0.1:1000/firestore │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Database       │ 127.0.0.1:9000 │ http://127.0.0.1:1000/database  │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:1000/storage   │
-└────────────────┴────────────────┴─────────────────────────────────┘
-  Emulator Hub running at 127.0.0.1:4400
-  Other reserved ports: 4500, 9151
-
-Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
- 
-[debug] [2023-11-25T10:29:14.139Z] ----------------------------------------------------------------------
-[debug] [2023-11-25T10:29:14.144Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --import=exported-dev-data --export-on-exit=exported-dev-data
-[debug] [2023-11-25T10:29:14.145Z] CLI Version:   12.9.1
-[debug] [2023-11-25T10:29:14.146Z] Platform:      win32
-[debug] [2023-11-25T10:29:14.147Z] Node Version:  v21.1.0
-[debug] [2023-11-25T10:29:14.211Z] Time:          Sat Nov 25 2023 11:29:14 GMT+0100 (West Africa Standard Time)
-[debug] [2023-11-25T10:29:14.212Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2023-11-25T10:29:14.801Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-11-25T10:29:14.801Z] > authorizing via signed-in user (dev.epicdevler@gmail.com)
-[debug] [2023-11-25T10:29:16.766Z] java version "21" 2023-09-19 LTS
-
-[debug] [2023-11-25T10:29:16.767Z] Java(TM) SE Runtime Environment (build 21+35-LTS-2513)
-Java HotSpot(TM) 64-Bit Server VM (build 21+35-LTS-2513, mixed mode, sharing)
-
-[debug] [2023-11-25T10:29:16.909Z] Parsed Java major version: 21
-[info] i  emulators: Starting emulators: auth, functions, firestore, database, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, storage"}}
-[debug] [2023-11-25T10:29:16.981Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T10:29:16.981Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T10:29:16.981Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T10:29:16.982Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T10:29:16.982Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T10:29:16.982Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T10:29:16.982Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":1000},{"address":"::1","family":"IPv6","port":1000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project cs-foodapp. This may result in unexpected behavior. 
-[debug] [2023-11-25T10:29:17.100Z] [hub] writing locator at C:\Users\User\AppData\Local\Temp\hub-cs-foodapp.json
+[debug] [2023-11-25T22:02:13.401Z] [hub] writing locator at C:\Users\User\AppData\Local\Temp\hub-cs-foodapp.json
 [warn] !  emulators: Could not find import/export metadata file, skipping data import! {"metadata":{"emulator":{"name":"hub"},"message":"Could not find import/export metadata file, \u001b[1mskipping data import!\u001b[22m"}}
-[debug] [2023-11-25T10:29:17.186Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T10:29:17.187Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T10:29:17.187Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":1000},{"address":"::1","family":"IPv6","port":1000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[debug] [2023-11-25T22:02:13.432Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-11-25T22:02:13.432Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-11-25T22:02:13.432Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":1000},{"address":"::1","family":"IPv6","port":1000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
 [warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: hosting, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mhosting, pubsub\u001b[22m"}}
-[debug] [2023-11-25T10:29:17.219Z] defaultcredentials: writing to file C:\Users\User\AppData\Roaming\firebase\dev_epicdevler_gmail.com_application_default_credentials.json
-[debug] [2023-11-25T10:29:17.245Z] Setting GAC to C:\Users\User\AppData\Roaming\firebase\dev_epicdevler_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\User\\AppData\\Roaming\\firebase\\dev_epicdevler_gmail.com_application_default_credentials.json"}}
-[debug] [2023-11-25T10:29:17.247Z] > refreshing access token with scopes: []
-[debug] [2023-11-25T10:29:17.250Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-11-25T10:29:17.251Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-11-25T10:29:18.249Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-11-25T10:29:18.249Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-11-25T10:29:18.319Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig [none]
-[debug] [2023-11-25T10:29:19.175Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig 200
-[debug] [2023-11-25T10:29:19.175Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig {"projectId":"cs-foodapp","databaseURL":"https://cs-foodapp-default-rtdb.firebaseio.com","storageBucket":"cs-foodapp.appspot.com","locationId":"us-central"}
-[debug] [2023-11-25T10:29:19.340Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-11-25T10:29:19.340Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2023-11-25T10:29:19.340Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\User\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8081,"--websocket_port",9150,"--project_id","cs-foodapp","--rules","C:\\_dev\\foodapp\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8081,\"--websocket_port\",9150,\"--project_id\",\"cs-foodapp\",\"--rules\",\"C:\\\\_dev\\\\foodapp\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2023-11-25T22:02:13.438Z] defaultcredentials: writing to file C:\Users\User\AppData\Roaming\firebase\dev_epicdevler_gmail.com_application_default_credentials.json
+[debug] [2023-11-25T22:02:13.813Z] Setting GAC to C:\Users\User\AppData\Roaming\firebase\dev_epicdevler_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\User\\AppData\\Roaming\\firebase\\dev_epicdevler_gmail.com_application_default_credentials.json"}}
+[debug] [2023-11-25T22:02:13.815Z] > refreshing access token with scopes: []
+[debug] [2023-11-25T22:02:13.817Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-25T22:02:13.817Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T22:02:15.018Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-11-25T22:02:15.018Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T22:02:15.091Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig [none]
+[debug] [2023-11-25T22:03:44.832Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig, {"headers":{},"method":"GET"}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig failed, reason: read ECONNRESET
+[debug] [2023-11-25T22:03:44.833Z] Failed to get Admin SDK config for cs-foodapp, falling back to cache Failed to get Admin SDK for Firebase project cs-foodapp. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project cs-foodapp. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"exit":1,"message":"Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig","original":{"message":"request to https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig failed, reason: read ECONNRESET","type":"system","errno":"ECONNRESET","code":"ECONNRESET"},"status":500},"status":500}
+[debug] [2023-11-25T22:03:44.908Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-11-25T22:03:44.908Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2023-11-25T22:03:44.908Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\User\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8081,"--websocket_port",9150,"--project_id","cs-foodapp","--rules","C:\\_dev\\foodapp\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8081,\"--websocket_port\",9150,\"--project_id\",\"cs-foodapp\",\"--rules\",\"C:\\\\_dev\\\\foodapp\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
 [info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2023-11-25T10:29:35.014Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp [none]
-[debug] [2023-11-25T10:29:35.858Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp 200
-[debug] [2023-11-25T10:29:35.859Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp {"projectId":"cs-foodapp","projectNumber":"385838129821","displayName":"CS foodapp","name":"projects/cs-foodapp","resources":{"hostingSite":"cs-foodapp","realtimeDatabaseInstance":"cs-foodapp-default-rtdb","storageBucket":"cs-foodapp.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_039070c2-b590-4afc-bd93-c4384dc123bf"}
-[debug] [2023-11-25T10:29:35.860Z] database rules config:  [{"instance":"cs-foodapp-default-rtdb","rules":"C:\\_dev\\foodapp\\database.rules.json"}]
-[debug] [2023-11-25T10:29:35.884Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
-[debug] [2023-11-25T10:29:35.885Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-11-25T10:29:35.885Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
-[debug] [2023-11-25T10:29:35.885Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\User\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning","--functions_emulator_host","127.0.0.1","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\",\"--functions_emulator_host\",\"127.0.0.1\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2023-11-25T22:03:59.685Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp [none]
+[debug] [2023-11-25T22:04:10.860Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/cs-foodapp, {"headers":{},"method":"GET","signal":{}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/cs-foodapp failed, reason: getaddrinfo ENOTFOUND firebase.googleapis.com
+[debug] [2023-11-25T22:04:10.861Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cs-foodapp (original: request to https://firebase.googleapis.com/v1beta1/projects/cs-foodapp failed, reason: getaddrinfo ENOTFOUND firebase.googleapis.com)
+[debug] [2023-11-25T22:04:10.861Z] Failed to retrieve default database instance: {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Firebase project cs-foodapp. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"exit":1,"message":"Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cs-foodapp","original":{"message":"request to https://firebase.googleapis.com/v1beta1/projects/cs-foodapp failed, reason: getaddrinfo ENOTFOUND firebase.googleapis.com","type":"system","errno":"ENOTFOUND","code":"ENOTFOUND"},"status":500},"status":500} {"metadata":{"emulator":{"name":"database"},"message":"Failed to retrieve default database instance: {\"name\":\"FirebaseError\",\"children\":[],\"exit\":2,\"message\":\"Failed to get Firebase project cs-foodapp. Please make sure the project exists and your account has permission to access it.\",\"original\":{\"name\":\"FirebaseError\",\"children\":[],\"exit\":1,\"message\":\"Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cs-foodapp\",\"original\":{\"message\":\"request to https://firebase.googleapis.com/v1beta1/projects/cs-foodapp failed, reason: getaddrinfo ENOTFOUND firebase.googleapis.com\",\"type\":\"system\",\"errno\":\"ENOTFOUND\",\"code\":\"ENOTFOUND\"},\"status\":500},\"status\":500}"}}
+[debug] [2023-11-25T22:04:10.862Z] database rules config:  [{"instance":"cs-foodapp-default-rtdb","rules":"C:\\_dev\\foodapp\\database.rules.json"}]
+[debug] [2023-11-25T22:04:10.997Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2023-11-25T22:04:10.997Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-11-25T22:04:10.998Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2023-11-25T22:04:10.998Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\User\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning","--functions_emulator_host","127.0.0.1","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\",\"--functions_emulator_host\",\"127.0.0.1\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
-[debug] [2023-11-25T10:30:00.893Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-11-25T10:30:05.263Z] Temp file directory for storage emulator: C:\Users\User\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\User\\AppData\\Local\\Temp/firebase/storage/blobs"}}
-[debug] [2023-11-25T10:30:05.321Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-11-25T10:30:05.322Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-11-25T10:30:05.322Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\User\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[debug] [2023-11-25T22:04:49.130Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-11-25T22:04:51.889Z] Temp file directory for storage emulator: C:\Users\User\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\User\\AppData\\Local\\Temp/firebase/storage/blobs"}}
+[debug] [2023-11-25T22:04:51.925Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-11-25T22:04:51.925Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-11-25T22:04:51.925Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\User\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-11-25T10:30:05.629Z] Web / API server started at 127.0.0.1:1000
+[debug] [2023-11-25T22:04:52.143Z] Web / API server started at 127.0.0.1:1000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:1000\n"}}
-[debug] [2023-11-25T10:30:05.629Z] Web / API server started at ::1:1000
+[debug] [2023-11-25T22:04:52.144Z] Web / API server started at ::1:1000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:1000\n"}}
 [info] i  functions: Watching "C:\_dev\foodapp\cfun" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\_dev\\foodapp\\cfun\" for Cloud Functions..."}}
-[debug] [2023-11-25T10:30:05.884Z] Validating nodejs source
-[debug] [2023-11-25T10:30:15.986Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync C:\WINDOWS\system32\cmd.exe ETIMEDOUT
+[debug] [2023-11-25T22:04:52.219Z] Validating nodejs source
+[debug] [2023-11-25T22:05:02.281Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync C:\WINDOWS\system32\cmd.exe ETIMEDOUT
     at Object.spawnSync (node:internal/child_process:1124:20)
     at Object.spawnSync (node:child_process:876:24)
     at Function.spawnSync [as sync] (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\index.js:26:23)
@@ -210,7 +77,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 21+35-LTS-2513, mixed mode, sharing)
     at async FunctionsEmulator.loadTriggers (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulator.js:325:34)
     at async FunctionsEmulator.connect (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulator.js:262:13)
     at async Object.startAll (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\controller.js:566:13)
-[debug] [2023-11-25T10:30:15.987Z] > [functions] package.json contents: {
+[debug] [2023-11-25T22:05:02.282Z] > [functions] package.json contents: {
   "name": "functions",
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
@@ -241,19 +108,19 @@ Java HotSpot(TM) 64-Bit Server VM (build 21+35-LTS-2513, mixed mode, sharing)
   },
   "private": true
 }
-[debug] [2023-11-25T10:30:16.029Z] Building nodejs source
-[debug] [2023-11-25T10:30:16.031Z] Failed to find version of module node: reached end of search path C:\_dev\foodapp\cfun\node_modules
+[debug] [2023-11-25T22:05:02.283Z] Building nodejs source
+[debug] [2023-11-25T22:05:02.283Z] Failed to find version of module node: reached end of search path C:\_dev\foodapp\cfun\node_modules
 [warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
-[debug] [2023-11-25T10:30:16.040Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-11-25T10:30:16.098Z] Found firebase-functions binary at 'C:\_dev\foodapp\cfun\node_modules\.bin\firebase-functions'
-[debug] [2023-11-25T10:30:25.912Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8831/__/quitquitquit failed, reason:  {"message":"request to http://localhost:8831/__/quitquitquit failed, reason: ","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}
-[info] Serving at port 8831
+[debug] [2023-11-25T22:05:02.287Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-11-25T22:05:02.335Z] Found firebase-functions binary at 'C:\_dev\foodapp\cfun\node_modules\.bin\firebase-functions'
+[debug] [2023-11-25T22:05:06.435Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8851/__/quitquitquit failed, reason:  {"message":"request to http://localhost:8851/__/quitquitquit failed, reason: ","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}
+[info] Serving at port 8851
 
-[error] !!  functions: Failed to load function definition from source: FetchError: request to http://127.0.0.1:8831/__/functions.yaml failed, reason: Parse Error: Expected HTTP/ {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FetchError: request to http://127.0.0.1:8831/__/functions.yaml failed, reason: Parse Error: Expected HTTP/"}}
-[debug] [2023-11-25T10:30:35.940Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=cs-foodapp-default-rtdb
-[debug] [2023-11-25T10:30:35.940Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\r\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\r\n  \"rules\": {\r\n    \".read\": false,\r\n    \".write\": false\r\n  }\r\n}"
-[debug] [2023-11-25T10:30:38.209Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
-[debug] [2023-11-25T10:30:38.209Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
+[error] !!  functions: Failed to load function definition from source: FetchError: request to http://127.0.0.1:8851/__/functions.yaml failed, reason: Parse Error: Expected HTTP/ {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FetchError: request to http://127.0.0.1:8851/__/functions.yaml failed, reason: Parse Error: Expected HTTP/"}}
+[debug] [2023-11-25T22:05:16.488Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=cs-foodapp-default-rtdb
+[debug] [2023-11-25T22:05:16.489Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\r\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\r\n  \"rules\": {\r\n    \".read\": false,\r\n    \".write\": false\r\n  }\r\n}"
+[debug] [2023-11-25T22:05:18.178Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
+[debug] [2023-11-25T22:05:18.178Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
 │ ✔  All emulators ready! It is now safe to connect your app. │
@@ -278,142 +145,19 @@ Java HotSpot(TM) 64-Bit Server VM (build 21+35-LTS-2513, mixed mode, sharing)
 
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
-[debug] [2023-11-25T12:14:24.899Z] ----------------------------------------------------------------------
-[debug] [2023-11-25T12:14:24.912Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --import=exported-dev-data --export-on-exit=exported-dev-data
-[debug] [2023-11-25T12:14:24.914Z] CLI Version:   12.9.1
-[debug] [2023-11-25T12:14:24.915Z] Platform:      win32
-[debug] [2023-11-25T12:14:24.915Z] Node Version:  v21.1.0
-[debug] [2023-11-25T12:14:24.916Z] Time:          Sat Nov 25 2023 13:14:24 GMT+0100 (West Africa Standard Time)
-[debug] [2023-11-25T12:14:24.916Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2023-11-25T12:14:25.310Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-11-25T12:14:25.311Z] > authorizing via signed-in user (dev.epicdevler@gmail.com)
-[debug] [2023-11-25T12:14:26.553Z] java version "21" 2023-09-19 LTS
-
-[debug] [2023-11-25T12:14:26.554Z] Java(TM) SE Runtime Environment (build 21+35-LTS-2513)
-Java HotSpot(TM) 64-Bit Server VM (build 21+35-LTS-2513, mixed mode, sharing)
-
-[debug] [2023-11-25T12:14:26.593Z] Parsed Java major version: 21
-[info] i  emulators: Starting emulators: auth, functions, firestore, database, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, storage"}}
-[debug] [2023-11-25T12:14:26.615Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T12:14:26.615Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T12:14:26.615Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T12:14:26.615Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T12:14:26.616Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T12:14:26.616Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T12:14:26.616Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":1000},{"address":"::1","family":"IPv6","port":1000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project cs-foodapp. This may result in unexpected behavior. 
-[debug] [2023-11-25T12:14:26.696Z] [hub] writing locator at C:\Users\User\AppData\Local\Temp\hub-cs-foodapp.json
-[warn] !  emulators: Could not find import/export metadata file, skipping data import! {"metadata":{"emulator":{"name":"hub"},"message":"Could not find import/export metadata file, \u001b[1mskipping data import!\u001b[22m"}}
-[debug] [2023-11-25T12:14:26.718Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T12:14:26.719Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-11-25T12:14:26.719Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":1000},{"address":"::1","family":"IPv6","port":1000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
-[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: hosting, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mhosting, pubsub\u001b[22m"}}
-[debug] [2023-11-25T12:14:26.728Z] defaultcredentials: writing to file C:\Users\User\AppData\Roaming\firebase\dev_epicdevler_gmail.com_application_default_credentials.json
-[debug] [2023-11-25T12:14:26.732Z] Setting GAC to C:\Users\User\AppData\Roaming\firebase\dev_epicdevler_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\User\\AppData\\Roaming\\firebase\\dev_epicdevler_gmail.com_application_default_credentials.json"}}
-[debug] [2023-11-25T12:14:26.734Z] > refreshing access token with scopes: []
-[debug] [2023-11-25T12:14:26.737Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-11-25T12:14:26.737Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-11-25T12:14:27.509Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-11-25T12:14:27.509Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-11-25T12:14:27.616Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig [none]
-[debug] [2023-11-25T12:14:28.630Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig 200
-[debug] [2023-11-25T12:14:28.630Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp/adminSdkConfig {"projectId":"cs-foodapp","databaseURL":"https://cs-foodapp-default-rtdb.firebaseio.com","storageBucket":"cs-foodapp.appspot.com","locationId":"us-central"}
-[debug] [2023-11-25T12:14:28.728Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-11-25T12:14:28.728Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2023-11-25T12:14:28.728Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\User\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8081,"--websocket_port",9150,"--project_id","cs-foodapp","--rules","C:\\_dev\\foodapp\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8081,\"--websocket_port\",9150,\"--project_id\",\"cs-foodapp\",\"--rules\",\"C:\\\\_dev\\\\foodapp\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
-[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2023-11-25T12:14:38.541Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp [none]
-[debug] [2023-11-25T12:14:39.824Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp 200
-[debug] [2023-11-25T12:14:39.824Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs-foodapp {"projectId":"cs-foodapp","projectNumber":"385838129821","displayName":"CS foodapp","name":"projects/cs-foodapp","resources":{"hostingSite":"cs-foodapp","realtimeDatabaseInstance":"cs-foodapp-default-rtdb","storageBucket":"cs-foodapp.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_039070c2-b590-4afc-bd93-c4384dc123bf"}
-[debug] [2023-11-25T12:14:39.827Z] database rules config:  [{"instance":"cs-foodapp-default-rtdb","rules":"C:\\_dev\\foodapp\\database.rules.json"}]
-[debug] [2023-11-25T12:14:39.861Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
-[debug] [2023-11-25T12:14:39.861Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-11-25T12:14:39.861Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
-[debug] [2023-11-25T12:14:39.862Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\User\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning","--functions_emulator_host","127.0.0.1","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\",\"--functions_emulator_host\",\"127.0.0.1\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
-[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
-[debug] [2023-11-25T12:14:55.025Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-11-25T12:14:57.373Z] Temp file directory for storage emulator: C:\Users\User\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\User\\AppData\\Local\\Temp/firebase/storage/blobs"}}
-[debug] [2023-11-25T12:14:57.420Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-11-25T12:14:57.420Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-11-25T12:14:57.420Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\User\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\User\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
-[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-11-25T12:14:57.625Z] Web / API server started at 127.0.0.1:1000
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:1000\n"}}
-[debug] [2023-11-25T12:14:57.626Z] Web / API server started at ::1:1000
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:1000\n"}}
-[info] i  functions: Watching "C:\_dev\foodapp\cfun" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\_dev\\foodapp\\cfun\" for Cloud Functions..."}}
-[debug] [2023-11-25T12:14:57.715Z] Validating nodejs source
-[debug] [2023-11-25T12:15:03.904Z] > [functions] package.json contents: {
-  "name": "functions",
-  "scripts": {
-    "lint": "eslint --ext .js,.ts .",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "18"
-  },
-  "main": "lib/index.js",
-  "dependencies": {
-    "firebase-admin": "^11.8.0",
-    "firebase-functions": "^4.3.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
-    "eslint": "^8.9.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-import": "^2.25.4",
-    "firebase-functions-test": "^3.1.0",
-    "typescript": "^4.9.0"
-  },
-  "private": true
-}
-[debug] [2023-11-25T12:15:03.904Z] Building nodejs source
-[debug] [2023-11-25T12:15:03.905Z] Failed to find version of module node: reached end of search path C:\_dev\foodapp\cfun\node_modules
-[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
-[debug] [2023-11-25T12:15:03.908Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-11-25T12:15:03.941Z] Found firebase-functions binary at 'C:\_dev\foodapp\cfun\node_modules\.bin\firebase-functions'
-[info] Serving at port 8052
-
-[debug] [2023-11-25T12:15:09.430Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
-[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
-[debug] [2023-11-25T12:15:14.526Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=cs-foodapp-default-rtdb
-[debug] [2023-11-25T12:15:14.526Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\r\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\r\n  \"rules\": {\r\n    \".read\": false,\r\n    \".write\": false\r\n  }\r\n}"
-[debug] [2023-11-25T12:15:16.027Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
-[debug] [2023-11-25T12:15:16.028Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
-[info] 
-┌─────────────────────────────────────────────────────────────┐
-│ ✔  All emulators ready! It is now safe to connect your app. │
-│ i  View Emulator UI at http://127.0.0.1:1000/               │
-└─────────────────────────────────────────────────────────────┘
-
-┌────────────────┬────────────────┬─────────────────────────────────┐
-│ Emulator       │ Host:Port      │ View in Emulator UI             │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:1000/auth      │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:1000/functions │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Firestore      │ 127.0.0.1:8081 │ http://127.0.0.1:1000/firestore │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Database       │ 127.0.0.1:9000 │ http://127.0.0.1:1000/database  │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:1000/storage   │
-└────────────────┴────────────────┴─────────────────────────────────┘
-  Emulator Hub running at 127.0.0.1:4400
-  Other reserved ports: 4500, 9150
-
-Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
- 
-[debug] [2023-11-25T13:30:40.875Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast [none]
-[debug] [2023-11-25T13:30:40.952Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"eventId":"92614c7f-43e8-4656-8782-d35d2d91ea87","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/cs-foodapp","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-11-25T13:30:40.836Z","data":{"uid":"Ei1n5f9hjS60dCkXHlHtXkeNLBMk","email":"dev.epicdevler@gmail.com","emailVerified":false,"metadata":{"creationTime":"2023-11-25T13:30:40.810Z","lastSignInTime":"2023-11-25T13:30:40.810Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"dev.epicdevler@gmail.com","federatedId":"dev.epicdevler@gmail.com","rawId":"dev.epicdevler@gmail.com"}]}}
-[debug] [2023-11-25T13:30:41.202Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast 200
-[debug] [2023-11-25T13:30:41.202Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-11-26T09:29:35.850Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast [none]
+[debug] [2023-11-26T09:29:35.928Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"eventId":"04d2150b-8062-4586-a8ad-5159a85fe1ad","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/cs-foodapp","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-11-26T09:29:35.814Z","data":{"uid":"JyAvixbTPfT86e113w6r49pxdgd1","email":"dev.epicdevler@gmail.com","emailVerified":false,"metadata":{"creationTime":"2023-11-26T09:29:35.747Z","lastSignInTime":"2023-11-26T09:29:35.747Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"dev.epicdevler@gmail.com","federatedId":"dev.epicdevler@gmail.com","rawId":"dev.epicdevler@gmail.com"}]}}
+[debug] [2023-11-26T09:29:36.184Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast 200
+[debug] [2023-11-26T09:29:36.184Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-11-26T10:04:14.515Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast [none]
+[debug] [2023-11-26T10:04:14.515Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"eventId":"1700993054514","timestamp":"2023-11-26T10:04:14.514Z","eventType":"google.storage.object.finalize","resource":{"service":"storage.googleapis.com","name":"projects/_/buckets/cs-foodapp.appspot.com/objects/menu/Menu 1","type":"storage#object"},"data":{"kind":"storage#object","name":"menu/Menu 1","bucket":"cs-foodapp.appspot.com","generation":"1700993045462","metageneration":"1","contentType":"image/png","timeCreated":"2023-11-26T10:04:05.463Z","updated":"2023-11-26T10:04:05.463Z","storageClass":"STANDARD","size":"8049589","md5Hash":"S2waxhjdK8Q3j0LY++4AeA==","etag":"+Ivj8Hi0KmXkocqaLQUWrpEK6lU","metadata":{"firebaseStorageDownloadTokens":"b29e4e22-efa3-476b-aad5-dfd929322365"},"crc32c":"I35sSw==","timeStorageClassUpdated":"2023-11-26T10:04:05.463Z","id":"cs-foodapp.appspot.com/menu/Menu 1/1700993045462","selfLink":"http://127.0.0.1:9199/storage/v1/b/cs-foodapp.appspot.com/o/menu%2FMenu%201","mediaLink":"http://127.0.0.1:9199/download/storage/v1/b/cs-foodapp.appspot.com/o/menu%2FMenu%201?generation=1700993045462&alt=media"}}
+[debug] [2023-11-26T10:04:14.543Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast 200
+[debug] [2023-11-26T10:04:14.543Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-11-26T10:04:14.545Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast [none]
+[debug] [2023-11-26T10:04:14.545Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"specversion":"1.0","id":"3e438843-37eb-423f-8419-649fe6129b38","type":"google.cloud.storage.object.v1.finalized","source":"//storage.googleapis.com/projects/_/buckets/cs-foodapp.appspot.com/objects/menu/Menu 1","time":"2023-11-26T10:04:05.463Z","data":{"kind":"storage#object","name":"menu/Menu 1","bucket":"cs-foodapp.appspot.com","generation":"1700993045462","metageneration":"1","contentType":"image/png","timeCreated":"2023-11-26T10:04:05.463Z","updated":"2023-11-26T10:04:05.463Z","storageClass":"STANDARD","size":"8049589","md5Hash":"S2waxhjdK8Q3j0LY++4AeA==","etag":"+Ivj8Hi0KmXkocqaLQUWrpEK6lU","metadata":{"firebaseStorageDownloadTokens":"b29e4e22-efa3-476b-aad5-dfd929322365"},"crc32c":"I35sSw==","timeStorageClassUpdated":"2023-11-26T10:04:05.463Z","id":"cs-foodapp.appspot.com/menu/Menu 1/1700993045462","selfLink":"http://127.0.0.1:9199/storage/v1/b/cs-foodapp.appspot.com/o/menu%2FMenu%201","mediaLink":"http://127.0.0.1:9199/download/storage/v1/b/cs-foodapp.appspot.com/o/menu%2FMenu%201?generation=1700993045462&alt=media"}}
+[debug] [2023-11-26T10:04:14.550Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast 200
+[debug] [2023-11-26T10:04:14.550Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-11-26T12:48:55.668Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast [none]
+[debug] [2023-11-26T12:48:56.317Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"eventId":"c3644694-4e91-4965-8259-b47d0d5bbb16","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/cs-foodapp","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-11-26T12:48:51.921Z","data":{"uid":"sLHKuPvpla1IEiEAuE4YpSujvDRq","email":"dev.epicdevler@gmai.com","emailVerified":false,"metadata":{"creationTime":"2023-11-26T12:48:46.843Z","lastSignInTime":"2023-11-26T12:48:46.843Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"dev.epicdevler@gmai.com","federatedId":"dev.epicdevler@gmai.com","rawId":"dev.epicdevler@gmai.com"}]}}
+[debug] [2023-11-26T12:48:58.807Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast 200
+[debug] [2023-11-26T12:48:58.807Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cs-foodapp/trigger_multicast {"status":"multicast_acknowledged"}

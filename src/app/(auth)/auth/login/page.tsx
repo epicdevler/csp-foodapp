@@ -68,7 +68,7 @@ export default function Login() {
         const errorCode = error.code;
         const errorMessage = error.message;
 
-        if (errorCode == "auth/user-not-found") {
+        if (errorCode == "auth/user-not-found" || errorCode == "auth/invalid-login-credentials") {
           setError("Invalid email or password.")
         } else {
           setError("Something went wrong, try again.")

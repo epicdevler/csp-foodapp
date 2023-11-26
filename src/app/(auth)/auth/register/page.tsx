@@ -4,7 +4,7 @@ import { DB_COLLECTIONS, USERS_ROLE } from "@/libs/auth/utils";
 import { BasicUserData } from "@/libs/models";
 import { Alert, AlertIcon, Button, FormControl, FormLabel, Heading, Input, Stack, Text } from "@chakra-ui/react";
 import { User, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
+import { Timestamp, doc, serverTimestamp, setDoc } from "firebase/firestore";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -75,7 +75,8 @@ export default function Register() {
           fullName: fullNameValue,
           email: user.email!!,
           uid: user.uid,
-          role: USERS_ROLE.CLIENT
+          role: USERS_ROLE.CLIENT,
+          dateJoined: Timestamp.now()
         }
         try {
           saveUser(userData)

@@ -2,7 +2,7 @@ import { Box, Container, GridItem, SimpleGrid, Text, HStack, IconButton, Flex, S
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-import { StaticRoutes } from "@/app/route_util";
+import { StaticRoutes } from "@/libs/route_util";
 
 export const Footer = () => {
     const siteMap = [

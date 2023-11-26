@@ -1,12 +1,12 @@
 'use client'
-import { StaticRoutes } from "@/app/route_util"
+import { StaticRoutes } from "@/libs/route_util"
 import { logOut } from "@/libs/auth"
 import { Box, Container, Text, Flex, HStack, IconButton, VStack, SystemStyleObject, Button, ToastId, useToast, Modal, ModalBody, ModalContent, ModalOverlay } from "@chakra-ui/react"
 import { MagnifyingGlassIcon, Bars3Icon, XCircleIcon, ShoppingCartIcon, ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
-import { Loading } from "./LoadingPage"
+import { MiniLoader } from "./LoadingPage"
 import { auth } from "@/db_init"
 import AuthButton from "./AuthButton"
 import { onAuthStateChanged } from "firebase/auth"
@@ -247,7 +247,7 @@ const Navbar = () => {
 
         {
             isLoading ?
-                <Loading isOpen={isLoading} onClose={toggleIsLoading} message={loadingMsg} />
+                <MiniLoader isOpen={isLoading} onClose={toggleIsLoading} message={loadingMsg} />
                 : undefined
         }
 

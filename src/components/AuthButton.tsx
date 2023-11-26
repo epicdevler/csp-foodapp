@@ -1,4 +1,4 @@
-import { StaticRoutes } from "@/app/route_util";
+import { StaticRoutes } from "@/libs/route_util";
 import { auth } from "@/db_init";
 import { Button } from "@chakra-ui/react";
 import Link from "next/link";
