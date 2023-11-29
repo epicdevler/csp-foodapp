@@ -62,11 +62,6 @@ const CheckOutPage = () => {
         }, []
     )
 
-    useEffect(
-        () => {
-            console.log(paymentMethod)
-        }, [paymentMethod]
-    )
 
 
 
@@ -249,6 +244,8 @@ const CheckOutPage = () => {
                                         list.push(
                                             a
                                         )
+                                        console.log("Object: ", a)
+                                        console.log("Inner List: ", list)
                                     }
 
                                 }
