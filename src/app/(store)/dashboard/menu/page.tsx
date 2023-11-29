@@ -14,6 +14,8 @@ import { getBlob, ref } from "firebase/storage";
 import Head from "next/head";
 import { isEmpty } from "@/libs/utils";
 import { getImageResult } from "@/libs/storage_utils";
+import { Loader } from 'rsuite';
+import 'rsuite/dist/rsuite.min.css';
 
 
 
@@ -142,6 +144,15 @@ export default function Menu() {
               <Text w={'full'} textAlign={'center'}>No Data</Text>
             </Flex>
             : undefined
+        }
+
+        {
+          isLoadingMenu
+            ? <div className="flex items-center justify-center w-full py-10">
+              <Loader content="Loading..." vertical />
+            </div>
+            :
+            undefined
         }
 
 
