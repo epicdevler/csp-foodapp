@@ -206,7 +206,9 @@ const CheckOutPage = () => {
 
 
     useEffect(() => {
+        console.log("Loaded")
         const unsub = () => {
+            console.log("Activated")
             onAuthStateChanged(
                 auth,
                 (user) => {
@@ -274,6 +276,7 @@ const CheckOutPage = () => {
         }
 
         return () => {
+            console.log("Unsubscribing")
             unsub()
         }
 
