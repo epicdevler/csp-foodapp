@@ -252,6 +252,7 @@ const CheckOutPage = () => {
                                     }
 
                                 }
+                                console.log(list)
                                 setCartItems(list)
                                 setLoading(false)
 

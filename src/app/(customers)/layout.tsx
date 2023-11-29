@@ -42,13 +42,6 @@ export default function RootLayout({
         }, []
     )
 
-    useEffect(
-        () => {
-            console.log(user)
-        }, [user]
-    )
-
-
     return (
         <html lang="en">
             <body className={`${inter.className} relative`}>
