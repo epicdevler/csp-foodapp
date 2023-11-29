@@ -102,7 +102,7 @@ export default function AddMenuItem(
                     }
 
                     addDoc(
-                        collection(firestore_db, DB_COLLECTIONS.MENU),
+                        collection(firestore_db, DB_COLLECTIONS.Menu),
                         menuData
                     ).then(
                         (data) => {

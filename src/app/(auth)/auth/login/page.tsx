@@ -70,7 +70,11 @@ export default function Login() {
 
         if (errorCode == "auth/user-not-found" || errorCode == "auth/invalid-login-credentials") {
           setError("Invalid email or password.")
-        } else {
+        }
+        if (errorCode == "auth/network-request-failed") {
+          setError("Network error, check internet connection.")
+        }
+        else {
           setError("Something went wrong, try again.")
         }
 

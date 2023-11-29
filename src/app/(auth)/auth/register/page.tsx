@@ -67,7 +67,7 @@ export default function Register() {
 
     setLoading(true)
     createUserWithEmailAndPassword(auth, emailValue, passwordValue)
-      .then((userCredential) => {        
+      .then((userCredential) => {
         // Signed in 
         const user: User = userCredential.user;
 
@@ -103,7 +103,11 @@ export default function Register() {
 
         if (errorCode == "auth/email-already-in-use") {
           setError("Email aleady exists.")
-        } else {
+        }
+        if (errorCode == "auth/network-request-failed") {
+          setError("Network error, check internet connection.")
+        }
+        else {
           setError("Something went wrong, try again.")
         }
         const a = auth.currentUser

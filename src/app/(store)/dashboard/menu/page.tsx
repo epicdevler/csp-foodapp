@@ -47,7 +47,7 @@ export default function Menu() {
 
 
   useEffect(() => {
-    const q = query(collection(firestore_db, DB_COLLECTIONS.MENU))
+    const q = query(collection(firestore_db, DB_COLLECTIONS.Menu))
 
     const unsub = onSnapshot(
       q, (snap) => {
@@ -84,7 +84,6 @@ export default function Menu() {
       unsub()
     }
   }, [])
-
 
   return (
     <>

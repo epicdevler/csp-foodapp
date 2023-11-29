@@ -29,9 +29,13 @@ export default function DialogNavigation() {
     }
 
     return (
-        <>
+        <>  
             <BookTableModal isOpen={view === "bookTable"} onClose={handleCloseModal} />
-            <CartDrawer isOpen={view === "cart"} onClose={handleCloseModal} />
+            {
+                view === "cart" ?
+                    <CartDrawer isOpen={view === "cart"} onClose={handleCloseModal} />
+                    : <></>
+            }
         </>
     )
 }

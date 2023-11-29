@@ -1,12 +1,12 @@
 'use client'
-import { firestore_db } from "@/db_init"
+import { auth, firestore_db } from "@/db_init"
 import { DB_COLLECTIONS } from "@/libs/firestore_utils"
 import { BaseMenuItem, MenuItem } from "@/libs/models"
 import { getImageResult } from "@/libs/storage_utils"
 import { isEmpty } from "@/libs/utils"
 import { Container, GridItem, VStack, SimpleGrid, Image, Text, Heading, LinkOverlay, LinkBox, Card, CardBody, CardHeader, Flex, HStack, IconButton, Stack, Skeleton, CardFooter, ToastId, useToast } from "@chakra-ui/react"
 import { HeartIcon, ShoppingCartIcon } from "@heroicons/react/24/outline"
-import { query, collection, where, getDocs } from "firebase/firestore"
+import { query, updateDoc, collection, where, getDocs, doc, setDoc, arrayUnion, increment, addDoc, serverTimestamp } from "firebase/firestore"
 import Head from "next/head"
 import Link from "next/link"
 import { useParams, usePathname, useRouter, useSearchParams } from "next/navigation"
@@ -27,7 +27,7 @@ const MenuCategoriesItemPage = () => {
     const category = (params.category as string).replace("%20", " ")
 
     useEffect(() => {
-        const q = query(collection(firestore_db, DB_COLLECTIONS.MENU), where("categoryId", "==", category))
+        const q = query(collection(firestore_db, DB_COLLECTIONS.Menu), where("categoryId", "==", category))
 
         getDocs(q)
             .then(_data => {
@@ -65,31 +65,65 @@ const MenuCategoriesItemPage = () => {
     const toast = useToast()
     const toastIdRef = useRef<ToastId>()
 
+    const updateToast = (status: "error" | "success", description: string) => {
+        toastIdRef.current = toast(
+            {
+                description: description,
+                status: status,
+                duration: 1500,
+            }
+        )
+    }
+
 
     useEffect(
         () => {
             if (!isEmpty(error)) {
-                toastIdRef.current = toast(
-                    {
-                        description: `${error}`,
-                        status: 'error',
-                        duration: 1500,
-                    }
-                )
+                updateToast("error", error)
             }
         }, [error]
     )
 
+
+    const currentUser = auth.currentUser
+
+    const addItemToCart = (item: MenuItem) => {
+        if (currentUser) {
+            const cartRef = doc(collection(firestore_db, DB_COLLECTIONS.MyCart()))   
+            setDoc(
+                cartRef,
+                {
+                    menuRef: doc(firestore_db, `${DB_COLLECTIONS.Menu}/${item.docId}`),
+                    count: 1,
+                    dateAdded: serverTimestamp()
+                }
+            )
+                .then(
+                    (data) => {
+                        updateToast("success", `${item.title} added to your cart.`)
+                    }
+                )
+                .catch(
+                    (error) => {
+                        updateToast("error", `Failed to add ${item.title} to your cart.`)
+                        console.error("Error: ", error)
+                    }
+                )
+        } else {
+            console.log("No Logged in user.")
+        }
+    }
 
 
 
 
 
     return <>
-        <Head>
-            <title>{category} | Menu</title>
-        </Head>
         <section>
+
+            <Head>
+                <title>{category} | Menu</title>
+            </Head>
             <Container p={5} py={10} maxW={'container.lg'}>
                 <Heading hidden textAlign={'center'} size={'md'} mb={10} p={5}>{category}</Heading>
 
@@ -114,7 +148,11 @@ const MenuCategoriesItemPage = () => {
                                     data.map(
                                         (item, index) => {
                                             return (
-                                                <MenuGridItemComponent key={index} item={item} />
+                                                <MenuGridItemComponent addToCart={
+                                                    () => {
+                                                        addItemToCart(item)
+                                                    }
+                                                } key={index} item={item} />
                                             )
                                         }
                                     )
@@ -137,7 +175,7 @@ export default MenuCategoriesItemPage
 
 
 
-const MenuGridItemComponent = ({ item }: { item: MenuItem }) => {
+const MenuGridItemComponent = ({ item, addToCart }: { item: MenuItem, addToCart: () => void }) => {
 
     const [imgUrl, setImgUrl] = useState<string>("")
     const [isLoading, setLoading] = useState<boolean>(true)
@@ -146,12 +184,15 @@ const MenuGridItemComponent = ({ item }: { item: MenuItem }) => {
 
         getImageResult(item.imgName)
             .then(url => {
-                setImgUrl(url)
+                setImgUrl((url as string))
                 setLoading(false)
             })
 
     }, [item])
 
+    const handleAddToCart = () => {
+        addToCart()
+    }
 
 
     {
@@ -192,6 +233,7 @@ const MenuGridItemComponent = ({ item }: { item: MenuItem }) => {
                                         />
 
                                         <IconButton
+                                            onClick={handleAddToCart}
                                             colorScheme='black'
                                             variant={'unstyled'}
                                             size={'sm'}
