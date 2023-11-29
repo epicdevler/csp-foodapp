@@ -87,9 +87,9 @@ export default function Menu() {
 
   return (
     <>
-    <Head>
-      <title>Menu | Dashboard</title>
-    </Head>
+      <Head>
+        <title>Menu | Dashboard</title>
+      </Head>
       <Box p={5}>
         <Heading size={'lg'}>Menu Items</Heading>
 
@@ -180,7 +180,7 @@ const MenuItemRow = ({ sn, item, isLoaded }: { isLoaded: boolean, sn: number, it
 
     getImageResult(item.imgName)
       .then(url => {
-        setImgUrl(url)
+        setImgUrl((url as string))
         setLoading(false)
       })
 
