@@ -210,7 +210,7 @@ const CheckOutPage = () => {
             onAuthStateChanged(
                 auth,
                 (user) => {
-
+                    console.log("User: ", user)
                     const get = async () => {
 
                         const q = query(collection(firestore_db, DB_COLLECTIONS.MyCart(user)))
@@ -225,7 +225,7 @@ const CheckOutPage = () => {
                                     const doc = snap.docs[index];
                                     const data = (doc.data() as Cart)
 
-                                    const _menu = await transaction.get(data.menuRef)                                    
+                                    const _menu = await transaction.get(data.menuRef)
                                     if (_menu.exists()) {
 
                                         const menu = (_menu.data() as MenuItem)
@@ -272,7 +272,10 @@ const CheckOutPage = () => {
                 }
             )
         }
-        return unsub
+
+        return () => {
+            unsub()
+        }
 
     }, [])
 
