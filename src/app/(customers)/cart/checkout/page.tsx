@@ -231,8 +231,7 @@ const CheckOutPage = () => {
                                     const doc = snap.docs[index];
                                     const data = (doc.data() as Cart)
 
-                                    const _menu = await transaction.get(data.menuRef)
-                                    console.log(_menu.exists())
+                                    const _menu = await transaction.get(data.menuRef)                                    
                                     if (_menu.exists()) {
 
                                         const menu = (_menu.data() as MenuItem)
@@ -258,9 +257,6 @@ const CheckOutPage = () => {
 
 
                             })
-
-
-
                         }
 
                         catch (error) {
