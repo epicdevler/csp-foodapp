@@ -2,12 +2,11 @@
 import Navbar from "@/components/Navbar"
 import { Container, Box, Heading, Text, Select, FormControl, FormLabel, GridItem, Input, InputGroup, InputLeftAddon, NumberDecrementStepper, NumberIncrementStepper, NumberInput, NumberInputField, NumberInputStepper, SimpleGrid, Divider, Button, VStack, ToastId, useToast, } from "@chakra-ui/react"
 import { Formik, ErrorMessage } from 'formik';
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react"
 import {
     isValidPhoneNumber
 } from 'libphonenumber-js'
 import * as EmailValidator from 'email-validator';
-
 
 import { PaystackButton, usePaystackPayment } from "react-paystack"
 import { PaystackProps } from "react-paystack/dist/types";
